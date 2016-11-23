@@ -1,0 +1,4 @@
+.slboard_agree_text {width:100%;height:200px;border:1px solid #ccc;overflow-y:scroll}
+
+#slboard_account_agree_form input,#slboard_agree label {vertical-align:middle}
+#slboard_account_agree_form .submit_form img,#slboard_agree .submit_form input {vertical-align:middle}

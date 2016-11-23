@@ -1,0 +1,1 @@
+<script type="text/javascript">window.parent.CKEDITOR.tools.callFunction(<?php echo $data['CKEditorFuncNum'] ?>,"<?php echo $data['url'] ?>","업로드 완료")</script>

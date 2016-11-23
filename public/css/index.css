@@ -1,0 +1,147 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Nanum Gothic';
+    src: local('☺'),url('../fonts/NanumGothic-Regular.eot?#iefix') format('embedded-opentype'),url('../fonts/NanumGothic-Regular.woff') format('woff');
+}
+
+html,body {margin:0;padding:0;height: 100%;background:#eee}
+body { font-family: "Nanum Gothic","나눔고딕","Malgun Gothic","맑은 고딕","굴림",gulim,"돋움",Dotum,Arial,Helvetica, sans-serif;color:#333}
+label {vertical-align:middle;cursor:pointer}
+a img {border:none}
+input {vertical-align:middle}
+fieldset {border:none}
+legend {display:none}
+a{color:#666;text-decoration:none;}
+a:active {color:red}
+a:hover{color:#333;text-decoration:underline;}
+a img {border:none}
+
+h1 {font-size :180%}
+h2 {font-size :160%}
+h3 {font-size :140%}
+h4,h5,h6 {font-size : 120%}
+
+/* Getting the new tags to behave */
+article, aside, audio, canvas, command, datalist, details, embed, figcaption, figure, footer, header, hgroup, keygen, meter, nav, output, progress, section, source, video {display:block;}
+mark, rp, rt, ruby, summary, time {display:inline;}
+
+/* layout */
+footer {clear:both;float:left;width:80%;margin:0 10%;color:#666;text-align: center}
+footer div {margin:0.3em 0 0}
+#mom {clear:both;float:left;width:100%;padding:0}
+.sub_main {float:left;width:100%;margin:0 auto;padding:0 0 30px}
+.page-header {float:left;width:100%}
+.page-header h2 {float:left;margin:0.7em 0 0;padding:0;font-weight:bold;color:#666}
+.page-header .breadcrumb  {float:right;margin:0}
+.alert-success {clear:both}
+#sl_ad {clear:both;margin-bottom:10px}
+#sl_tag_cloud .box_content {padding:0}
+#tags {float:left;width:100%}
+.css1 { font-size: 15px; color:orange}
+.css2 { font-size: 20px; color:#333}
+.css3 { font-size: 30px; color:blue; }
+.css4 { font-size: 45px; color:red;}
+
+/* Common Class */
+.arial {font-family:Arial}
+.noneData {text-align:center}
+.clear{clear:both}
+.none{display:none}
+.number {font-family:Arial;letter-spacing:0}
+.clear{clear:both}
+.none{display:none}
+.wrapper {margin:0 auto;width:728px}
+.ad_test {background:red}
+.jumbotron {margin:30px 0}
+.sl_categories span.hidden-xs {display:inline!important}
+.c_pointer {cursor:pointer}
+.page-header {border-bottom:1px solid #999}
+
+/* header */
+header {position:relative}
+header h1 {float:left;margin:1.5em 0 0;padding:0}
+header h1 a:active {color:red}
+header nav { position: relative; z-index: 999; margin:0; padding:0}
+header nav ul { float: right; margin: 1.5em 0 0 0; padding: 0}
+header nav li { float: left; list-style: none; margin: 0 0 0 20px}
+header nav ul.nav-pills > li + li {margin-left:20px}
+header nav a { float: left; color: #333; font-size:1.3em; text-decoration: none}
+header nav a:hover {color:#000}
+header nav a:visited {color:#666}
+header nav a:active {color:red}
+header nav ul li ul {position:absolute;display:none}	
+header #top_menu {position:absolute;right:10px;top:5px;margin:0;padding:0;list-style:none;z-index:9999}
+header #top_menu li {float:left;margin:0 15px 0 0;padding:0}
+
+/* aside */ 
+aside {float:right;width:350px;margin:0}
+aside .box {margin-top:0}
+
+
+.section_bottom {text-align:center}
+
+.sl_user_form article .innser_section,#sl_order_add article .inner_section,#sl_user_index article  {background:#fff;border-radius:10px;border:1px solid #ccc;margin-bottom:30px;padding:30px}
+#sl_order_add article.product {margin-bottom:30px;border-radius:10px;}
+#sl_order_add .section_bottom {margin-top:30px}
+#sl_order_add .product {float:left;width:100%;background:#eee;border-radius:5px;padding:20px;margin-bottom:20px}
+#sl_order_add .product figcaption {display:block;width:1px;height:1px;text-indent:-9999px}
+#sl_order_add .product .product_image {float:left;width:20%}
+#sl_order_add .product .product_text {float:left;width:80%}
+#sl_order_add .product .product_text h4 {border-bottom:1px solid #ccc;padding:5px 0}
+#sl_order_add .product .product_text .product_price {float:right;}
+#sl_order_add .product .product_text .product_description {clear:both}
+#sl_order_add table caption {width:1px;height:1px;text-indent:-9999px}
+#find_zip {margin-left:0;padding-left:0}
+	
+@media all and (max-width: 768px) {
+	html,body {background:#ccc}
+	header {background:none;border-bottom:0;margin:1% 0}
+	header h1 {margin:2%;padding:0;font-size:1.6em}
+	header h1 a {float:left;background:none;text-indent:0;width:100%;font-weight:bold}
+	header h1 a:hover {text-decoration:none}  
+	header h1 a:active {color:red}
+	header nav.container {width:100%;margin:0;padding:0}
+	header nav ul {width:100%;margin:2% 0 0;padding:0;background:#fff;border-radius:5px}
+	header nav ul li,header ul li a {clear:both;float:left;width:100%;text-align:left}
+	header nav ul.nav-pills > li + li {margin-left:0}
+	header nav ul li {margin:0;padding:0}
+	header nav ul li a {display:block;border-bottom:1px solid #f3f3f3;text-indent:1em;padding:10px;border-radius:5px}
+	header nav ul li a:hover {text-decoration:none;background:#eee}
+	header nav ul li a:active {color:red}
+	header nav ul li a .glyphicon {margin-right:1em}
+	.nav-pills > li + li {margin:0}
+	#mom {float:left;clear:both;width:100%;margin:0}
+	#main {float:left;margin:0;padding:0;width:100%;padding:3%;border-radius:5px;background:#fff;}
+	.sub_main {clear:both;width:100%}
+	.sl_user_form article .innser_section,#sl_order_add article .inner_section,#sl_user_index article {padding:1%;margin-bottom:1%;border:none}
+	#sl_main_gallery .carousel-inner a.m_nm {margin-right:0}
+	#sl_main_blog li {margin-bottom:10px}
+	#sl_main_blog li.m_nm {margin-right:0}	
+	#main_main article ul {margin:0;padding:0;list-style:none}
+	#sl_intro_index #sl_intro_right {float:left;width:100%} 
+	header nav ul a:hover {color:#000}
+	header nav ul a:active {color:red}
+	.page-header {float:left;margin:0 0 10px}
+	#sl_intro_index #sl_intro_right, #sl_gallery_index #sl_gallery_right {width:100%;margin:0}
+	#sl_intro_index #sl_intro_left {width:100%}
+	footer {background:#fff;border-radius:5px;width:100%;margin:1% 0}
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+	header {height:8em;background:#f8f8f8;border-bottom:1px solid #e7e7e7}
+	header nav ul li:first-child {margin-left:0}	
+	#sl_intro_index #sl_intro_right dd {width:200px}
+	footer {height:5em;border-top:1px solid #e7e7e7}
+	#mom {margin:-8em 0 -5em;min-height:100%}
+	#main {padding-top:6em;padding-bottom:5em}
+}
+
+@media all and (min-width: 1025px) {
+	header {height:6em;background:#f8f8f8;border-bottom:1px solid #e7e7e7}
+	#sl_intro_index #sl_intro_right dd {width:200px}
+	footer {height:5em;border-top:1px solid #e7e7e7}
+	#mom {margin:-6em 0 -5em;min-height:100%}
+	#main {padding-top:6em;padding-bottom:5em}
+}
+

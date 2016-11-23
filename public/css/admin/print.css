@@ -1,0 +1,162 @@
+/* =====  CSS reset  ===== */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content: ''; content: none; }
+/* remember to define focus styles! */
+:focus { outline: 0; }
+/* remember to highlight inserts somehow! padding: 9px 17px 9px 17px; */
+ins { text-decoration: none; }
+del { text-decoration: line-through; }
+/* tables still need 'cellspacing="0"' in the markup */
+table { border-collapse: collapse;vertical-align:middle }
+
+
+img { border: 0; }
+ul { list-style: none; margin: 0; padding: 0; }
+p { margin: 0; padding: 0; }
+a { text-decoration: none; color: #2b6893; }
+.welcome a {color:#fff}
+.normal { font-style: normal; }
+.normalFont { font-style: normal; font-weight: normal; }
+
+.sl_left {text-align:left}
+.sl_center {text-align:center}
+.sl_right {text-align:right}
+.alert {color:red}
+
+
+
+table {vertical-align:middle}
+
+
+/* tag */
+body,html {margin:0;padding:0;height: 100%}
+html { height: 100%; background: transparent url(/images/admin/backgrounds/bg.jpg); }
+.html { height: 100%;  }
+html,body {margin:0;padding:0}
+body { font-family:"굴림",gulim,"돋움",Dotum,Arial, Helvetica, sans-serif;color:#666; font-size:1em }
+aside,header {display:none}
+label {vertical-align:middle;cursor:pointer}
+input {vertical-align:middle}
+a img {border:none}
+a {color:#666;text-decoration:none;}
+a:active {color:red}
+a:hover {color:#333;text-decoration:underline;}
+a img {border:none}
+table {margin:0;padding:0;width:100%;border-collapse:collapse;}
+table th {text-align:center;font-weight:bold}
+caption,legend {text-indent:-5000px; overflow:hidden;height:1px;font-size:0;line-height:0}
+fieldset {width:100%;border:none}
+form {position:relative;margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6 {font-size:12px;font-weight:bold}
+
+
+/* =====  Dynamic tables  ===== */
+.dTable thead th { background: #efefef; }
+
+.paging_two_button .ui-button { float: left; cursor: pointer; * cursor: hand; }
+.paging_full_numbers .ui-button { padding: 2px 6px; margin: 0; cursor: pointer; * cursor: hand; }
+.dataTables_paginate .ui-button { margin-right: -0.1em !important; }
+.dataTables_paginate .last { border-bottom: 1px solid #d5d5d5!important; }
+.dataTables_wrapper .ui-toolbar { padding: 5px; }
+
+.dataTables_paginate { width: auto; }
+.dataTables_info { padding: 7px 0 0 80px; color: #878787; }
+
+table.display thead th { padding: 4px 0px; cursor: pointer; * cursor: hand;  }
+
+div.dataTables_wrapper .ui-widget-header { font-weight: normal; background: #efefef url(/images/backgrounds/titleBg.png) repeat-x; border-top: 1px solid #D5D5D5; margin-top: -1px;	 border-right: none; }
+
+
+table.display thead th div.DataTables_sort_wrapper { position: relative; padding-right: 20px; color: #878787; }
+table.display thead th div.DataTables_sort_wrapper span { position: absolute; top: 50%; margin-top: -8px; right: 5px; }
+
+
+/* ===== Datatable styles ===== */
+
+.dataTables_wrapper { position: relative; _height: 302px; }
+.dataTables_processing { position: absolute; top: 0px; left: 50%; width: 250px; margin-left: -125px; border: 1px solid #ddd; text-align: center; color: #999;  padding: 2px 0; }
+.dataTables_length { color: #878787; margin: 7px 5px 0 5px; position: absolute; right: 2px; top: -37px; }
+.itemsPerPage { display: block; float: left; margin-right: 10px; }
+.dataTables_length label { padding-top: 10px;  }
+.dataTables_length select {  margin: 0 5px; }
+.dataTables_filter { text-align: left; margin: 4px 8px 2px 10px; position: absolute; left: 0; bottom: 8px; color: #878787;  }
+.dataTables_filter input[type="text"] { padding: 3px 20px 3px 5px!important; border: 1px solid #D5D5D5; width: 200px!important; position: relative; margin-left: 6px; -moz-border-radius: 2px; -webkit-border-radius: 2px; -khtml-border-radius: 2px; border-radius: 2px; color: #878787; }
+.dataTables_filter .srch { position: absolute; right: 6px; top: 7px; background: url(/images/searchSmall.png) no-repeat 0 0; border: none; width: 9px; height: 9px; }
+.dataTables_info { float: left; }
+.dataTables_paginate { text-align: right; margin: 6px; }
+
+
+/* DataTables display */
+table.display { margin: 0 auto; width: 100%; border-collapse: collapse; }
+table.display tfoot th { padding: 3px 0px 3px 10px; font-weight: bold; font-weight: normal; }
+table.display tr.heading2 td { border-bottom: 1px solid #aaa; }
+table.display td { padding: 8px 10px; }
+table.display td.center { text-align: center; }
+
+/* DataTables row classes*/
+table.display tr.odd.gradeA { background-color: #ddffdd; }
+table.display tr.even.gradeA { background-color: #eeffee; }
+table.display tr { border-bottom: 1px solid #e7e7e7; }
+table.display td { border-left: 1px solid #e7e7e7; }
+table.display td:first-child { border-left: none; }
+table.display tr.odd.gradeA { background-color: #fafafa; }
+table.display tr.even.gradeA { background-color: #f5f5f5; }
+table.display tr.odd.gradeC { background-color: #ddddff; }
+table.display tr.even.gradeC { background-color: #eeeeff; }
+table.display tr.odd.gradeX { background-color: #ffdddd; }
+table.display tr.even.gradeX { background-color: #ffeeee; }
+table.display tr.odd.gradeU { background-color: #ddd; }
+table.display tr.even.gradeU { background-color: #eee; }
+
+
+
+
+
+.noprint {display:none}
+
+.widget { background: #f9f9f9; border: 1px solid #cdcdcd; margin-top: 32px; clear: both; }
+.widget .title { height: 36px; background: #efefef url(/images/admin/backgrounds/titleBg.png) repeat-x; border-bottom: 1px solid #cdcdcd; }
+.widget .title .titleIcon { float: left; padding: 11px 11px; border-right: 1px solid #D5D5D5; }
+
+.toggle { background: #f9f9f9; border: 1px solid #cdcdcd; margin-top: 32px; clear: both; border-bottom: none; }
+.toggle .title { height: 36px; background: #efefef url(/images/admin/backgrounds/titleBg.png) repeat-x; border-bottom: 1px solid #cdcdcd; cursor: pointer; }
+.toggle .title h6 { float: left; font-size: 12px; font-weight: bold; padding: 9px 12px 8px 12px; display: block; } 
+.toggle .titleIcon { float: left; padding: 11px 11px; border-right: 1px solid #D5D5D5; }
+.toggle .body, .toggle .menu_body { padding: 12px 14px; border-bottom: 1px solid #cdcdcd; }
+.toggle .inactive { color: #2B6893; }
+
+
+.widget .loader { float: right; margin: 12px 12px 0 0; }
+.widget .title h6 { float: left; font-size: 12px; font-weight: bold; padding: 9px 12px 8px 12px; } 
+.widget .content { padding: 14px; } 
+.widget .body { padding: 12px 14px; }
+.widget > p { padding: 12px; }
+
+
+/* Form styles
+================================================== */
+.formRow { padding:14px; clear: both; border-bottom: 1px solid #E2E2E2; border-top: 1px solid white; position: relative; }
+.formRow:first-child { border-top: none; }
+.formRow:last-child { border-bottom: none; }
+.ui-formwizard .formRow:last-child { border-bottom: 1px solid #E2E2E2 ; }
+.wizButtons { border-top: 1px solid #fff; }
+.formRow .inputImg { position: absolute; top: 29px; right: 25px; }
+.formRow .labelImg { float: left; margin: 2px 10px 0 0; }
+.formRow > label { padding: 4px 0; display: block; float: left; }
+.formRight label { float: left; margin-right: 24px; padding: 2px 0; cursor: pointer; }
+.formNote { display: block; text-align: left;  padding-top: 5px; color: #939393; }
+.req { float: right; margin-left: 5px; display: block; color: #DB6464; }
+.formRow .checker, .formRow .radio { margin-right: 12px; margin-top: 4px; }
+.formRow .formRight { display: block; float: right; width: 80%; margin-right: 18px; }

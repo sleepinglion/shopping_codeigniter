@@ -1,0 +1,43 @@
+@CHARSET "UTF-8";
+
+.slboard_account_form input,.slboard_account_form label,.slboard_account_form img {vertical-align:middle}
+.slboard_account_form {float:left;margin:5px 0 0 ;padding:5px 0}
+.slboard_account_form .input_form_in {float:left;margin:1px;padding:10px 0 10px 10px}
+.slboard_account_form h4 {float:left;width:650px;margin:0 0 10px;padding:10px 0;border-bottom:1px solid #ccc} 
+.slboard_account_form .field {float:left;width:650px;margin:0;padding:10px 0;}
+.slboard_account_form .field label {float:left;display:block;width:100px;padding-left:15px}
+.slboard_account_form .field label.simple {float:none;display:inline;padding:0;}
+.slboard_account_form .field br {display:none;}
+.slboard_account_form textarea {width:500px;height:200px}
+.slboard_account_form .submit_form {text-align:center;margin:10px 0 0;border-top:1px solid #ccc}
+.slboard_account_form input,.slboard_form label {vertical-align:middle}
+.slboard_account_form .sl_input {	border:1px solid #ccc;border-top-color:#999;border-left-color:#999;padding:4px 2px;font-size:12px}
+.slboard_account_form .sl_input:focus { background-color:#ffffdd}
+
+.essential {background:url('/images/icon/essential.png') no-repeat;}
+#label_address_detail {height:40px;text-indent:-9999px}
+#address_zip {width:500px}
+#address_detail {width:500px;margin:7px 0 0}
+.explain {margin:0 0 0 8px;display:none;color:#ffcc00}
+
+#sl_find_zip_link {margin-left:8px}
+#sl_find_id_link,#sl_find_password_link {color:#999;margin:0 10px}
+#sl_find_id_link {margin-left:25px}
+#sl_find_id_link:hover,#find_password_link:hover{color:#12c6eb} 
+
+#basic_address_search_form {float:left; position:relative;width: 500px;/*position: absolute;*/background-color: #fff;padding-bottom: 10px;border: 2px solid #555;}
+#basic_address_search_form h3  {float:left;color:#fff;font-size:14px;width:100%;margin:0;text-indent:20px;padding:5px 0;background:#999;}
+#basic_address_search_form .msg_box {float:left;width:100%;padding:20px  0 0}
+#basic_address_search_form .msg_box p {float:left;width:100%;margin:0 0 0 30px;padding:0}
+#basic_address_search_form ol {width:460px;margin:0 0 0 20px;padding:0;list-style:none}
+#basic_address_search_form ol li {position:relative;width:460px;margin:0;padding:3px 0;cursor:pointer;}
+#basic_address_search_form ol li p {margin:0;padding:0;color:#333} 
+#basic_address_search_form .close_popup {display:block;position:absolute;z-index:9999;width:20px;height:20px;top:7px;right:7px;background:url('/images/icon/close_popup.png') no-repeat;text-decoration:none;}
+#basic_address_search_form.close_popup:hover {text-decoration:none;	}
+#basic_address_search_form .close_popup span {display:none;}
+#basic_address_search_form .zip_box {display:none;border:1px solid #ccc;margin: 10px 20px;padding:3px 0;height:400px;overflow-y:auto;}	
+#basic_address_search_form .zip_code {position:absolute;right:5px;bottom:3px;letter-spacing:0}	
+#basic_address_search_form  .number {position:absolute;top:2px;left:0px;width:20px;text-align:right;display:block;color:#999;}
+#basic_address_search_form .sl_input {	border:1px solid #ccc;border-top-color:#999;border-left-color:#999;padding:4px 2px;font-size:12px}
+#basic_address_search_form .sl_input:focus { background-color:#ffffdd}
+

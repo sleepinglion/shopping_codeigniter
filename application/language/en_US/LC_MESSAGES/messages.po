@@ -1,0 +1,838 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: genomics_shopping\n"
+"POT-Creation-Date: 2016-11-22 11:36+0900\n"
+"PO-Revision-Date: 2016-11-22 11:36+0900\n"
+"Last-Translator: \n"
+"Language-Team: genomics\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
+"X-Poedit-Basepath: ../../..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: controllers/Orders.php:15
+msgid "Order Name"
+msgstr "Name(Order)"
+
+#: controllers/Orders.php:16
+msgid "Order Email"
+msgstr "Email(Order)"
+
+#: controllers/Orders.php:17
+msgid "Order Phone"
+msgstr "Phone(Order)"
+
+#: controllers/Orders.php:18
+msgid "Order Payment"
+msgstr "Payment"
+
+#: controllers/Orders.php:20
+msgid "Shipping Name"
+msgstr "Name(Shipping)"
+
+#: controllers/Orders.php:21
+msgid "Shipping Zip"
+msgstr "Zip(Shipping)"
+
+#: controllers/Orders.php:22
+msgid "Shipping Address Default"
+msgstr "Default Address(Shipping )"
+
+#: controllers/Orders.php:23
+msgid "Shipping Address Detail"
+msgstr "Detail Address(Shipping)"
+
+#: controllers/Orders.php:24
+msgid "Shipping Email"
+msgstr "Email(Shipping )"
+
+#: controllers/Orders.php:25
+msgid "Shipping Phone"
+msgstr "Phone(Shipping )"
+
+#: controllers/Orders.php:39 views/layout/elements/header.php:15
+#: views/orders/add.php:4
+msgid "Product"
+msgstr "Product"
+
+#: controllers/Orders.php:40 views/orders/add.php:22 views/orders/add.php:45
+#: views/products/index.php:20
+msgid "Quantity"
+msgstr "Quantity"
+
+#: controllers/Orders.php:44 views/orders/add.php:173
+msgid "No User Agreement"
+msgstr "No User Agreement"
+
+#: controllers/Orders.php:44 controllers/Orders.php:46 controllers/Users.php:33
+#: controllers/Users.php:34 controllers/Users.php:35
+#, php-format
+msgid "Please Agree %s"
+msgstr "Please Agree %s"
+
+#: controllers/Orders.php:46 views/orders/add.php:181
+msgid "Order Agreement"
+msgstr "Order Agreement"
+
+#: controllers/SL.php:65
+msgid "Homepage Title"
+msgstr "Shopping Mall"
+
+#: controllers/SL.php:120 views/users/add.php:4 views/users/add.php:5
+#: views/users/edit.php:18
+#, php-format
+msgid "The %s field is required."
+msgstr "The %s field is required."
+
+#: controllers/SL.php:121 views/users/edit.php:19
+#, php-format
+msgid "The %s field must be at least %s characters in length."
+msgstr "The %s field must be at least %s characters in length."
+
+#: controllers/SL.php:122
+#, php-format
+msgid "The %s field cannot exceed %s characters in length."
+msgstr "The %s field cannot exceed %s characters in length."
+
+#: controllers/SL.php:123
+#, php-format
+msgid "The %s field must contain only numbers."
+msgstr "The %s field must contain only numbers."
+
+#: controllers/SL.php:124 views/users/add.php:7
+#, php-format
+msgid "%s field must contain a unique value."
+msgstr "%s field must contain a unique value."
+
+#: controllers/SL.php:125
+#, php-format
+msgid "The %s field does not match the %s field."
+msgstr "The %s field does not match the %s field."
+
+#: controllers/SL.php:126
+#, php-format
+msgid "The %s field must contain a number greater than %s."
+msgstr "The %s field must contain a number greater than %s."
+
+#: controllers/SL.php:127
+#, php-format
+msgid "The %s field must contain a number less than %s."
+msgstr "The %s field must contain a number less than %s."
+
+#: controllers/SL.php:128 views/users/add.php:6
+#, php-format
+msgid "The %s field must contain a valid email address."
+msgstr "The %s field must contain a valid email address."
+
+#: controllers/Users.php:9 views/layout/elements/header.php:17
+msgid "My Page"
+msgstr "My Page"
+
+#: controllers/Users.php:21 controllers/Users.php:117 views/orders/add.php:87
+#: views/orders/add.php:147 views/users/add.php:5 views/users/add.php:6
+#: views/users/add.php:7 views/users/add.php:13 views/users/edit.php:24
+#: views/users/login.php:7
+msgid "Email"
+msgstr "Email"
+
+#: controllers/Users.php:22 controllers/Users.php:64 controllers/Users.php:118
+#: views/questions/add.php:11 views/users/add.php:22 views/users/edit.php:30
+#: views/users/login.php:13
+msgid "Password"
+msgstr "Password"
+
+#: controllers/Users.php:23 controllers/Users.php:65
+msgid "Password Confirmation"
+msgstr "Password Confirmation"
+
+#: controllers/Users.php:24 controllers/Users.php:68 views/orders/add.php:81
+#: views/orders/add.php:121 views/questions/add.php:7
+#: views/questions/index.php:13 views/users/add.php:34 views/users/edit.php:42
+msgid "Name"
+msgstr "Name"
+
+#: controllers/Users.php:25 controllers/Users.php:69 views/orders/add.php:93
+#: views/orders/add.php:153 views/users/add.php:40 views/users/edit.php:48
+msgid "Phone"
+msgstr "Phone"
+
+#: controllers/Users.php:26 controllers/Users.php:27 controllers/Users.php:70
+#: views/users/add.php:46 views/users/edit.php:54
+msgid "Birthday"
+msgstr "Birthday"
+
+#: controllers/Users.php:27
+#, php-format
+msgid "%s Must Validate Date ex) Y-m-d"
+msgstr "%s Must Validate Date ex) Y-m-d"
+
+#: controllers/Users.php:28 controllers/Users.php:71 views/users/add.php:52
+#: views/users/edit.php:60
+msgid "Sex"
+msgstr "Sex"
+
+#: controllers/Users.php:30 controllers/Users.php:73 views/users/add.php:68
+#: views/users/edit.php:76
+msgid "Height"
+msgstr "Height"
+
+#: controllers/Users.php:31 controllers/Users.php:74 views/users/add.php:74
+#: views/users/edit.php:82
+msgid "Weight"
+msgstr "Weight"
+
+#: controllers/Users.php:33 views/users/add.php:87
+msgid "OverAge18 Agreement"
+msgstr "OverAge18 Agreement"
+
+#: controllers/Users.php:34 views/users/add.php:94
+#: views/users/see_agree_service.php:5
+msgid "Service Agreement"
+msgstr "Service Agreement"
+
+#: controllers/Users.php:35 views/users/add.php:101
+#: views/users/see_agree_information.php:5
+msgid "Personal Information Agreement"
+msgstr "Personal Information Agreement"
+
+#: controllers/Users.php:37 views/layout/elements/header.php:19
+msgid "User Add"
+msgstr "User Add"
+
+#: controllers/Users.php:70
+#, php-format
+msgid "%s Must Validate Date"
+msgstr "%s Must Validate Date"
+
+#: controllers/Users.php:77 views/users/index.php:10
+msgid "Edit User"
+msgstr "Edit User"
+
+#: controllers/Users.php:91
+msgid "Successfully Updated User"
+msgstr "Successfully Updated User"
+
+#: controllers/Users.php:141 controllers/Users.php:144
+msgid "Not Match ID OR Password"
+msgstr "Not Match ID OR Password"
+
+#: controllers/Users.php:156 views/layout/elements/header.php:10
+#: views/users/login.php:29
+msgid "Login"
+msgstr "Not Match ID OR Password"
+
+#: controllers/Users.php:179
+msgid "Already Exists Email"
+msgstr "Already Exists Email"
+
+#: helpers/sl_helper.php:53
+msgid "Free"
+msgstr "Free"
+
+#: models/SL.php:110 models/SL.php:115 views/notices/add.php:5
+#: views/notices/edit.php:5 views/notices/index.php:16
+#: views/questions/add.php:16 views/questions/edit.php:6
+#: views/questions/index.php:14
+msgid "Title"
+msgstr "no_answer"
+
+#: models/SL.php:110 views/notices/add.php:9 views/notices/edit.php:9
+#: views/questions/add.php:24 views/questions/edit.php:10
+msgid "Content"
+msgstr "Content"
+
+#: models/SL.php:110
+msgid "Title+Content"
+msgstr "Title+Content"
+
+#: views/layout/elements/footer.php:3
+msgid "Footer Address"
+msgstr "Address : USA New York"
+
+#: views/layout/elements/header.php:4
+msgid "Home Title"
+msgstr "Home Title"
+
+#: views/layout/elements/header.php:7
+msgid "Welcome"
+msgstr "Welcome"
+
+#: views/layout/elements/header.php:8
+msgid "Logout"
+msgstr "Logout"
+
+#: views/layout/elements/header.php:22
+msgid "Board"
+msgstr "Board"
+
+#: views/layout/elements/header.php:24
+#: views/layout/elements/notices/index.php:2
+msgid "Notice"
+msgstr "Notice"
+
+#: views/layout/elements/header.php:25
+msgid "Question"
+msgstr "Question"
+
+#: views/layout/elements/message.php:4
+msgid "close"
+msgstr "close"
+
+#: views/layout/elements/notices/index.php:15 views/notices/index.php:35
+#: views/questions/index.php:33
+msgid "No Article"
+msgstr "No Article"
+
+#: views/layout/elements/notices/index.php:17
+msgid "more"
+msgstr "more"
+
+#: views/layout/elements/page_header.php:4
+msgid "Home"
+msgstr "Home"
+
+#: views/layout/elements/search.php:5 views/layout/elements/search.php:7
+#: views/layout/elements/search.php:14 views/layout/elements/search.php:32
+msgid "label_title"
+msgstr "Title"
+
+#: views/layout/elements/search.php:8 views/layout/elements/search.php:15
+#: views/layout/elements/search.php:33
+msgid "label_content"
+msgstr "Content"
+
+#: views/layout/elements/search.php:9
+msgid "label_titlencontent"
+msgstr "Title+Content"
+
+#: views/layout/elements/search.php:10 views/layout/elements/search.php:17
+#: views/layout/elements/search.php:35
+msgid "label_nickname"
+msgstr "Nickname"
+
+#: views/layout/elements/search.php:19 views/layout/elements/search.php:39
+msgid "insert search word"
+msgstr "insert search word"
+
+#: views/layout/elements/search.php:21 views/layout/elements/search.php:41
+msgid "Search"
+msgstr "Search"
+
+#: views/layout/elements/search.php:34
+msgid "label_title+content"
+msgstr "Title+Content"
+
+#: views/layout/elements/tags/index.php:4
+msgid "Tag"
+msgstr "Tag"
+
+#: views/notices/add.php:12 views/notices/edit.php:12
+#: views/questions/add.php:27 views/questions/edit.php:17
+msgid "Submit"
+msgstr "Submit"
+
+#: views/notices/bottom_menu.php:3 views/questions/bottom_menu.php:3
+msgid "index_link"
+msgstr "목록"
+
+#: views/notices/bottom_menu.php:7 views/questions/bottom_menu.php:7
+msgid "delete_link"
+msgstr "삭제"
+
+#: views/notices/bottom_menu.php:8 views/questions/bottom_menu.php:8
+msgid "edit_link"
+msgstr "수정"
+
+#: views/notices/confirm_delete.php:4 views/questions/confirm_delete.php:4
+#: views/users/confirm_delete.php:4
+#, php-format
+msgid "Are you sure delete article number %d?"
+msgstr "Are you sure delete article number %d?"
+
+#: views/notices/confirm_delete.php:7 views/questions/confirm_delete.php:7
+#: views/users/confirm_delete.php:7
+msgid "Delete"
+msgstr "Delete"
+
+#: views/notices/index.php:15
+msgid "Id"
+msgstr "ID"
+
+#: views/notices/index.php:17
+msgid "label_comment_count"
+msgstr "댓글수"
+
+#: views/notices/index.php:18 views/questions/index.php:16
+msgid "View Count"
+msgstr "View Count"
+
+#: views/notices/index.php:19 views/questions/index.php:17
+msgid "Created At"
+msgstr "Created At"
+
+#: views/notices/index.php:45 views/questions/index.php:42
+msgid "new_link"
+msgstr "신규작성"
+
+#: views/notices/view.php:7 views/questions/view.php:7
+msgid "label_created_at"
+msgstr "작성일"
+
+#: views/orders/add.php:33
+msgid "Calculator Table"
+msgstr "Calculator Table"
+
+#: views/orders/add.php:43
+msgid "Product Name"
+msgstr "Product Name"
+
+#: views/orders/add.php:44
+msgid "Product Price"
+msgstr "Product Price"
+
+#: views/orders/add.php:46
+msgid "Shipping Cost"
+msgstr "Shipping Cost"
+
+#: views/orders/add.php:47
+msgid "Total Cost"
+msgstr "Total Cost"
+
+#: views/orders/add.php:58 views/orders/add.php:60 views/orders/add.php:61
+#: views/orders/add.php:68
+msgid "Currency"
+msgstr "$"
+
+#: views/orders/add.php:67
+msgid "All Total Cost"
+msgstr "All Total Cost"
+
+#: views/orders/add.php:78
+msgid "Order Info"
+msgstr "Order Info"
+
+#: views/orders/add.php:101
+msgid "Shipping Info"
+msgstr "Shipping Info"
+
+#: views/orders/add.php:106
+msgid "Same Member"
+msgstr "Same Member"
+
+#: views/orders/add.php:106
+msgid "Same Order"
+msgstr "Same Order"
+
+#: views/orders/add.php:109
+msgid "Not Same Member"
+msgstr "Not Same Member"
+
+#: views/orders/add.php:109
+msgid "Not Same Order"
+msgstr "Not Same Order"
+
+#: views/orders/add.php:127
+msgid "label_address"
+msgstr "Address"
+
+#: views/orders/add.php:129
+msgid "Zip Code"
+msgstr "Zip Code"
+
+#: views/orders/add.php:132
+msgid "Find Zip"
+msgstr "Find Zip"
+
+#: views/orders/add.php:140
+msgid "Default Address"
+msgstr "Default Address"
+
+#: views/orders/add.php:143
+msgid "Detail Address"
+msgstr "Detail Address"
+
+#: views/orders/add.php:159
+msgid "label_shipping_message"
+msgstr "Shipping Message"
+
+#: views/orders/add.php:167
+msgid "Agree Order"
+msgstr "Agree Order"
+
+#: views/orders/add.php:187
+msgid "Payment"
+msgstr "Payment"
+
+#: views/orders/add.php:201 views/products/index.php:28
+msgid "Order Form Submit"
+msgstr "Order Form Submit"
+
+#: views/products/index.php:14
+msgid "No Image"
+msgstr "No Image"
+
+#: views/products/index.php:32
+msgid "Not Exists Product"
+msgstr "Not Exists Product"
+
+#: views/questions/add.php:20
+msgid "Secret"
+msgstr "Secret"
+
+#: views/questions/index.php:15
+msgid "Answer"
+msgstr "Answer"
+
+#: views/questions/index.php:26
+msgid "answer"
+msgstr "Answer"
+
+#: views/questions/index.php:26
+msgid "no_answer"
+msgstr "No Answer"
+
+#: views/users/add.php:8
+msgid "Available Email"
+msgstr "Available Email"
+
+#: views/users/add.php:10 views/users/edit.php:21
+msgid "User Data Default Insert"
+msgstr "Default Data "
+
+#: views/users/add.php:18
+msgid "check_email_available"
+msgstr "Check Email Available"
+
+#: views/users/add.php:28 views/users/edit.php:36
+msgid "Password Confirm"
+msgstr "Password Confirm"
+
+#: views/users/add.php:55 views/users/edit.php:63
+msgid "Male"
+msgstr "Male"
+
+#: views/users/add.php:58 views/users/edit.php:66
+msgid "Female"
+msgstr "Female"
+
+#: views/users/add.php:65 views/users/edit.php:73
+msgid "User Data Optional Insert"
+msgstr "Optional Data "
+
+#: views/users/add.php:82
+msgid "User Agree"
+msgstr "User Agree"
+
+#: views/users/add.php:94 views/users/add.php:101
+msgid "See It"
+msgstr "See It"
+
+#: views/users/add.php:108
+msgid "User Form Submit"
+msgstr "User Form Submit"
+
+#: views/users/edit.php:32
+msgid "User Edit Password"
+msgstr "User Edit Password"
+
+#: views/users/edit.php:38
+msgid "User Edit Password Confirm"
+msgstr "User Edit Password Confirm"
+
+#: views/users/edit.php:90
+msgid "User Form Edit Submit"
+msgstr "User Form Edit Submit"
+
+#: views/users/index.php:4
+msgid "Report"
+msgstr "See Report"
+
+#: views/users/index.php:16
+msgid "Register Code"
+msgstr "Register Code"
+
+#: views/users/index.php:22
+msgid "Order"
+msgstr "Order"
+
+#: views/users/login.php:22
+msgid "Remember Email"
+msgstr "Remember Email"
+
+#: views/users/see_agree_information.php:11
+#: views/users/see_agree_service.php:11
+msgid "Confirm"
+msgstr "Confirm"
+
+#~ msgid "Blog"
+#~ msgstr "Blog"
+
+#~ msgid "Gallery"
+#~ msgstr "Gallery"
+
+#~ msgid "no_data"
+#~ msgstr "No Data"
+
+#~ msgid "Guest Book"
+#~ msgstr "Guest Book"
+
+#~ msgid "search"
+#~ msgstr "search"
+
+#~ msgid "label_name"
+#~ msgstr "Name"
+
+#~ msgid "label_email"
+#~ msgstr "Email"
+
+#~ msgid "label_phone"
+#~ msgstr "Phone Number"
+
+#~ msgid "label_password"
+#~ msgstr "Password"
+
+#~ msgid "remember_email"
+#~ msgstr "Remember Email"
+
+#~ msgid "title"
+#~ msgstr "제목"
+
+#~ msgid "Successfully Created Article"
+#~ msgstr "게시물이 등록되었습니다."
+
+#~ msgid "Successfully Edited Article"
+#~ msgstr "게시물이 수정되었습니다."
+
+#~ msgid "Successfully Edited User"
+#~ msgstr "회원정보가 수정되었습니다."
+
+#~ msgid "login"
+#~ msgstr "로그인"
+
+#~ msgid "logout"
+#~ msgstr "로그아웃"
+
+#~ msgid "The %s field must be at least %d characters in length."
+#~ msgstr "%s(은)는 적어도 %d자 이상이여야 합니다."
+
+#~ msgid "Shipping"
+#~ msgstr "배송정보"
+
+#~ msgid "Product Cost"
+#~ msgstr "제품가격"
+
+#~ msgid "welcome"
+#~ msgstr "환영합니다."
+
+#~ msgid "User"
+#~ msgstr "사용자"
+
+#~ msgid "Order Zip"
+#~ msgstr "우편번호(주문정보)"
+
+#~ msgid "Order Address Default"
+#~ msgstr "기본주소(주문정보)"
+
+#~ msgid "Order Address Detail"
+#~ msgstr "상세주소(주문정보)"
+
+#~ msgid "The %s field is required"
+#~ msgstr "%s(을)를 입력해주세요"
+
+#~ msgid "invalid %s email"
+#~ msgstr "%s(이)가 바른 이메일형식이 아닙니다"
+
+#~ msgid "label_description"
+#~ msgstr "소개"
+
+#~ msgid "submit"
+#~ msgstr "작성"
+
+#~ msgid "label_sex"
+#~ msgstr "성별"
+
+#~ msgid "label_password_confirm"
+#~ msgstr "비밀번호 확인"
+
+#~ msgid "label_birthday"
+#~ msgstr "생일"
+
+#~ msgid "label_height"
+#~ msgstr "키"
+
+#~ msgid "label_weight"
+#~ msgstr "몸무게"
+
+#~ msgid "Order_Name"
+#~ msgstr "이름(주문정보)"
+
+#~ msgid "Order_Zip"
+#~ msgstr "주소(주문정보)"
+
+#~ msgid "disagree"
+#~ msgstr "반대"
+
+#~ msgid "agree"
+#~ msgstr "찬성"
+
+#~ msgid "Agree"
+#~ msgstr "약관동의"
+
+#~ msgid "Products"
+#~ msgstr "제품들"
+
+#~ msgid "Users"
+#~ msgstr "사용자들"
+
+#~ msgid "Intro"
+#~ msgstr "제노믹스"
+
+#~ msgid "label_photo"
+#~ msgstr "사진"
+
+#~ msgid "Edit"
+#~ msgstr "수정"
+
+#~ msgid "delete"
+#~ msgstr "삭제"
+
+#~ msgid "label_category_id"
+#~ msgstr "분류"
+
+#~ msgid "label_tag"
+#~ msgstr "태그(여러개 태그는 ','로 구분지어서 입력)"
+
+#~ msgid "All"
+#~ msgstr "전체"
+
+#~ msgid "Guest_book"
+#~ msgstr "방명록"
+
+#~ msgid "Main Title"
+#~ msgstr "웹프로그래머 잠자는-사자입니다."
+
+#~ msgid "Main Description"
+#~ msgstr "잠자는사자의 사자굴에 오신것을 환영합니다."
+
+#~ msgid "SLBoard Dream"
+#~ msgstr "깨끗한 웹을 꿈꾸고 있습니다"
+
+#~ msgid "label_count"
+#~ msgstr "조회수"
+
+#~ msgid "link_more"
+#~ msgstr "더보기"
+
+#~ msgid "label_gender"
+#~ msgstr "성별"
+
+#~ msgid "male"
+#~ msgstr "남자"
+
+#~ msgid "female"
+#~ msgstr "여자"
+
+#~ msgid "label_job"
+#~ msgstr "직업"
+
+#~ msgid "label_like_things"
+#~ msgstr "좋아하는것"
+
+#~ msgid "label_hate_things"
+#~ msgstr "싫어하는것"
+
+#~ msgid "label_alternate_name"
+#~ msgstr "다른 이름"
+
+#~ msgid "label_birth_date"
+#~ msgstr "생일"
+
+#~ msgid "label_answer"
+#~ msgstr "답변여부"
+
+#~ msgid "label_secret"
+#~ msgstr "비밀글"
+
+#~ msgid "label_id"
+#~ msgstr "번호"
+
+#~ msgid "content"
+#~ msgstr "내용"
+
+#~ msgid "description"
+#~ msgstr "설명"
+
+#~ msgid "delete_confirm"
+#~ msgstr "확인"
+
+#~ msgid "label_delete_photo"
+#~ msgstr "사진 삭제"
+
+#~ msgid "Portfolio"
+#~ msgstr "제작작품"
+
+#~ msgid "poll_title"
+#~ msgstr "제목"
+
+#~ msgid "link_edit"
+#~ msgstr "수정"
+
+#~ msgid "link_user_agree"
+#~ msgstr "회원가입"
+
+#~ msgid "link_login"
+#~ msgstr "로그인"
+
+#~ msgid "Histories"
+#~ msgstr "약력"
+
+#~ msgid "Contact"
+#~ msgstr "문의"
+
+#~ msgid "Faq"
+#~ msgstr "FAQ"
+
+#~ msgid "site_address"
+#~ msgstr "경기도청"
+
+#~ msgid "not_login"
+#~ msgstr "먼저 로그인 해주세요 "
+
+#~ msgid "empty or invalid category_id"
+#~ msgstr "action_vi"
+
+#~ msgid "action_index"
+#~ msgstr "목록"
+
+#~ msgid "action_view"
+#~ msgstr "본문"
+
+#~ msgid "login first"
+#~ msgstr "로그인 해주세요"
+
+#~ msgid "poll_communities"
+#~ msgstr "토론 게시판"
+
+#~ msgid "blog"
+#~ msgstr "블로그"
+
+#~ msgid "label_agree_count"
+#~ msgstr "찬성수"
+
+#~ msgid "label_disagree_count"
+#~ msgstr "반대수"
+
+#~ msgid "label_disagree"
+#~ msgstr "반대"
+
+#~ msgid "next"
+#~ msgstr "다음"
+
+#, fuzzy
+#~ msgid "label_%s"
+#~ msgstr "번호"
