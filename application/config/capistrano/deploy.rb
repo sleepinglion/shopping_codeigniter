@@ -2,7 +2,7 @@
 lock '3.6.1'
 
 set :application, 'shopping_admin'
-set :repo_url, 'git@github.com:sleepinglion/shopping.git'
+set :repo_url, 'git@github.com:sleepinglion/shopping_codeigniter.git'
 set :branch, 'master'
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
@@ -31,16 +31,17 @@ append :linked_dirs, 'public/uploads', 'application/logs'
 
 
 namespace :deploy do
-  desc 'Chmod Cache'
-  task :chmod_cache do
+  desc 'Make Cache Directory'
+  task :make_cache_directory do
     on roles(:app), in: :sequence, wait: 1 do
       within release_path do
+          execute "mkdir #{release_path}/application/cache"        
           execute :chmod, "-R 777 application/cache"
       end
     end
   end
   
-  after :finishing, 'deploy:chmod_cache'
+  after :finishing, 'deploy::make_cache_directory'
 end
 
 # Default value for default_env is {}
