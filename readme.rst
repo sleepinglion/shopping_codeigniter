@@ -1,6 +1,6 @@
-###################
-What is SL shopping
-###################
+###############################
+What is SL shopping_codeigniter
+###############################
 
 SL shopping is an Application Basic Shopping-Mall(Use CI Framework,Boostrap).
 You Don't Need To Make Basic Shopping-Mall Function, Just Use This ,Extension Or Upgrade.
