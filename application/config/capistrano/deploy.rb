@@ -36,12 +36,12 @@ namespace :deploy do
     on roles(:app), in: :sequence, wait: 1 do
       within release_path do
           execute "mkdir #{release_path}/application/cache"        
-          execute :chmod, "-R 777 application/cache"
+          execute "chmod -R 777 #{release_path}/application/cache"
       end
     end
   end
   
-  after :finishing, 'deploy::make_cache_directory'
+  after :finishing, 'deploy:make_cache_directory'
 end
 
 # Default value for default_env is {}
