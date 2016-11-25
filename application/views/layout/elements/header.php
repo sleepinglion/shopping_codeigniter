@@ -23,6 +23,7 @@
 						<ul class="dropdown-menu">
 							<li <?php echo sl_active_class('notices') ?>><?php echo anchor('notices', _('Notice').'<span class="visible-xs glyphicon glyphicon-chevron-right pull-right"></span>', array('title' => _('Notice'))) ?></li>
 							<li <?php echo sl_active_class('questions') ?>><?php echo anchor('questions', _('Question').'<span class="visible-xs glyphicon glyphicon-chevron-right pull-right"></span>', array('title' => _('Question'))) ?></li>
+							<li <?php echo sl_active_class('faqs') ?>><?php echo anchor('faqs', _('Faq').'<span class="visible-xs glyphicon glyphicon-chevron-right pull-right"></span>', array('title' => _('Faq'))) ?></li>							
 						</ul>
 					</li>
 				</ul>
