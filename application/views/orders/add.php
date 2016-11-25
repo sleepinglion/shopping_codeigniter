@@ -103,18 +103,11 @@
 			<div class="form-group">
 				<div class="col-sm-10 col-sm-offset-2">
 					<label class="radio-inline">
-						<input type="radio" name="shipping[same_order]" value="1" <?php echo set_radio('shipping[same_order]', 1,true) ?> /> <?php if($this -> session -> userdata('user_id')): ?><?php echo _('Same Member') ?><?php else: ?><?php echo _('Same Order') ?><?php endif ?>
+						<input type="radio" name="shipping[same_order]" value="1" <?php echo set_radio('shipping[same_order]', 1,TRUE) ?> /> <?php if($this -> session -> userdata('user_id')): ?><?php echo _('Same Member') ?><?php else: ?><?php echo _('Same Order') ?><?php endif ?>
 					</label>
 					<label class="radio-inline">
 						<input type="radio" name="shipping[same_order]" value="0" <?php echo set_radio('shipping[same_order]', 0) ?> /> <?php if($this -> session -> userdata('user_id')): ?><?php echo _('Not Same Member') ?><?php else: ?><?php echo _('Not Same Order') ?><?php endif ?>
 					</label>
-					<?php /*
-					<?php if(!empty($data['shipping']['total'])): ?>
-					<label class="radio-inline">
-						<input type="radio" name="same_order" value="0" <?php echo set_radio('same_order', 0) ?> /> <?php if($this -> session -> userdata('user_id')): ?><?php echo _('Not Same Member') ?><?php else: ?><?php echo _('Not Same Order') ?><?php endif ?>
-					</label>
-					<?php endif ?>
-					 */ ?>
  				</div>
 			</div>
 			<div class="form-group<?php if(form_error('shipping[name]')){echo ' has-error';} ?>">
@@ -132,9 +125,9 @@
 					<input type="button" class="btn btn-default" value="<?php echo _('Find Zip') ?>" />					
 				</div>
 				<div class="col-sm-10 col-sm-offset-2">
-<div id="wrap" style="display:none;border:1px solid;width:100%;height:300px;margin:5px 0;position:relative">
-<img src="//i1.daumcdn.net/localimg/localimages/07/postcode/320/close.png" id="btnFoldWrap" style="cursor:pointer;position:absolute;right:0px;top:-1px;z-index:1" alt="접기 버튼">
-</div>					
+					<div id="wrap" style="display:none;border:1px solid;width:100%;height:300px;margin:5px 0;position:relative">
+						<img src="//i1.daumcdn.net/localimg/localimages/07/postcode/320/close.png" id="btnFoldWrap" style="cursor:pointer;position:absolute;right:0px;top:-1px;z-index:1" alt="접기 버튼">
+					</div>					
 				</div>
 				<div class="col-sm-10 col-sm-offset-2" style="clear:both;padding-top:10px">
 					<input type="text" class="form-control" id="sl_shipping_address_default" name="shipping[address_default]" placeholder="<?php echo _('Default Address') ?>" value="<?php echo set_value('shipping[address_default]') ?>" <?php /* required="required" */ ?> />
