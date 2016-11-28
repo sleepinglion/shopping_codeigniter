@@ -1,8 +1,10 @@
 <section id="sl_order_add">
 	<?php echo form_open('orders/add', array('class' => 'form-horizontal','id'=>'order_form')) ?>
-	<article>
-		<h4><?php echo _('Product') ?></h4>
-		<div class="inner_section">
+	<article class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title"><?php echo _('Product') ?></h3>
+		</div>
+		<div class="panel-body">
 			<?php foreach($data['list'] as $index=>$product): ?>
 			<div class="product">
 				<?php echo form_hidden('product['.$index.'][id]',$product['id']) ?>
@@ -74,9 +76,11 @@
 	</article>
 	<?php echo $Layout->element('form_error_message') ?>
 	<?php echo $this->session->flashdata('error_message'); ?>		
-		<article <?php if($this -> session -> userdata('user_id')): ?>style="display:none"<?php endif ?>>
-			<h4><?php echo _('Order Info') ?></h4>
-			<div class="inner_section">							
+	<article class="panel panel-default" <?php if($this -> session -> userdata('user_id')): ?>style="display:none"<?php endif ?>>
+		<div class="panel-heading">			
+			<h3 class="panel-title"><?php echo _('Order Info') ?></h3>
+		</div>
+			<div class="panel-body">							
 			<div class="form-group<?php if(form_error('order[name]')){echo ' has-error';} ?>">
 				<label class="control-label col-sm-2" for="sl_order_name"><?php echo _('Name') ?></label>
 				<div class="col-sm-10">
@@ -97,9 +101,11 @@
 			</div>
 			</div>
 		</article>
-		<article>
-			<h4><?php echo _('Shipping Info') ?></h4>
-			<div class="inner_section">
+		<article class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title"><?php echo _('Shipping Info') ?></h3>
+			</div>
+			<div class="panel-body">
 			<div class="form-group">
 				<div class="col-sm-10 col-sm-offset-2">
 					<label class="radio-inline">
@@ -156,9 +162,11 @@
 			</div>
 			</div>	
 		</article>
-		<article>
-			<h4><?php echo _('Agree Order') ?></h4>
-			<div class="inner_section">
+		<article class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title"><?php echo _('Agree Order') ?></h3>
+			</div>
+			<div class="panel-body">
 			<?php if(!$this -> session -> userdata('user_id')): ?>				
 			<div class="col-md-offset-2<?php if(form_error('agree[no_user]')){echo ' has-error';} ?>">
 				<div class="checkbox">			
@@ -176,9 +184,11 @@
 				</div>
 			</div>	
 		</article>
-		<article>
-			<h4><?php echo _('Payment') ?></h4>
-			<div class="inner_section">			
+		<article class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title"><?php echo _('Payment') ?></h3>
+			</div>
+			<div class="panel-body">			
 			<div class="col-md-offset-2<?php if(form_error('order[payment_id]')){echo ' has-error';} ?>">
 				<div class="radio">
 				<?php foreach($data['payments'] as $index=>$payment): ?>				

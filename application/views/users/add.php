@@ -6,9 +6,11 @@
 	<input type="hidden" id="message_invalid_email" value="<?php printf(_('The %s field must contain a valid email address.'),_('Email')) ?>" />
 	<input type="hidden" id="message_exists_email" value="<?php printf(_('%s field must contain a unique value.'),_('Email')) ?>" />
 	<input type="hidden" id="message_available_email" value="<?php echo _('Available Email') ?>" />
-	<article>
-		<h4><?php echo _('User Data Default Insert') ?></h4>
-		<div class="innser_section">
+	<article class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title"><?php echo _('User Data Default Insert') ?></h3>
+		</div>
+		<div class="panel-body">
 		<div class="form-group<?php if(form_error('email')){echo ' has-error';} ?>">
 			<label class="control-label col-sm-2" for="sl_email"><?php echo _('Email') ?></label>
 			<div class="col-sm-6">
@@ -61,9 +63,11 @@
 		</div>
 		</div>
   	</article>
-  	<article>
-		<h4><?php echo _('User Data Optional Insert') ?></h4>
-		<div class="innser_section">
+	<article class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title"><?php echo _('User Data Optional Insert') ?></h3>
+		</div>
+		<div class="panel-body">
 		<div class="form-group<?php if(form_error('height')){echo ' has-error';} ?>">
 			<label class="control-label col-sm-2" for="sl_height"><?php echo _('Height') ?></label>
 			<div class="col-sm-10">
@@ -78,9 +82,11 @@
 		</div>
 		</div>
   	</article>
-	<article>
-		<h4><?php echo _('User Agree') ?></h4>
-		<div class="innser_section">		
+	<article class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title"><?php echo _('User Agree') ?></h3>
+		</div>
+		<div class="panel-body">		
 		<div class="col-md-offset-2<?php if(form_error('agree[over_age_18]')){echo ' has-error';} ?>">		
 			<div class="checkbox">
 				<label>
