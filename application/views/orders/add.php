@@ -119,7 +119,7 @@
 			<div class="form-group<?php if(form_error('shipping[zip_code]') OR form_error('shipping[address_default]') OR form_error('shipping[address_detail]')){echo ' has-error';} ?>">
 				<label class="control-label col-xs-12  col-sm-2" for="sl_shipping_address"><?php echo _('label_address') ?></label>
 				<div class="col-xs-6 col-sm-3">
-					<input type="text" class="form-control" id="sl_shipping_zip" name="shipping[zip_code]" placeholder="<?php echo _('Zip Code') ?>" value="<?php echo set_value('shipping[zip_code]') ?>" <?php /* required="required" */ ?> />
+					<input type="text" class="form-control" id="sl_shipping_zip" name="shipping[zip_code]" placeholder="<?php echo _('Zip Code') ?>" value="<?php echo set_value('shipping[zip_code]') ?>" maxlength="5" <?php /* required="required" */ ?> />
 				</div>
 				<div class="col-xs-6 col-sm-3" id="find_zip">
 					<input type="button" class="btn btn-default" value="<?php echo _('Find Zip') ?>" />					

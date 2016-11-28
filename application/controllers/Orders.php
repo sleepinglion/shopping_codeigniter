@@ -16,9 +16,10 @@ class Orders extends SL_Controller {
 			$this -> form_validation -> set_rules('order[email]', _('Order Email'), 'required|valid_email');
 			$this -> form_validation -> set_rules('order[phone]', _('Order Phone'), 'required|min_length[5]');
 			$this -> form_validation -> set_rules('order[payment_id]', _('Order Payment'), 'required');
-
+			
+			$this -> form_validation -> set_rules('shipping[same_order]', _('Shipping Same'), 'required');
 			$this -> form_validation -> set_rules('shipping[name]', _('Shipping Name'), 'required|min_length[2]|max_length[60]');
-			$this -> form_validation -> set_rules('shipping[zip_code]', _('Shipping Zip'), 'required');
+			$this -> form_validation -> set_rules('shipping[zip_code]', _('Shipping Zip'), 'required|min_length[5]|max_length[5]');
 			$this -> form_validation -> set_rules('shipping[address_default]', _('Shipping Address Default'), 'required');
 			$this -> form_validation -> set_rules('shipping[address_detail]', _('Shipping Address Detail'), 'required');
 			$this -> form_validation -> set_rules('shipping[email]', _('Shipping Email'), 'required|valid_email');

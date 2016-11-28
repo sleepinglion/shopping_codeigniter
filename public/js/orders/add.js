@@ -19,6 +19,10 @@ $(document).ready(function() {
 			display: $("#sl_order_phone").parent().parent().find('label').text()+'('+order_info+')',
 			rules: 'required'
 		},{
+			name: 'shipping[same]',
+			display: $('input[name="shipping[same_order]"]:first').parent().find('label').text()+'('+shipping_info+')',
+			rules: 'required'
+		},{
 			name: 'shipping[name]',
 			display: $("#sl_shipping_name").parent().parent().find('label').text()+'('+shipping_info+')',
 			rules: 'required'
@@ -33,7 +37,7 @@ $(document).ready(function() {
 		},{
 			name: 'shipping[zip_code]',
 			display: $("#sl_shipping_zip").attr('placeholder')+'('+shipping_info+')',
-			rules: 'required'
+			rules: 'required|min_length[5]|max_length[5]'
 		},{
 			name: 'shipping[address_default]',
 			display: $("#sl_shipping_address_default").attr('placeholder')+'('+shipping_info+')',
@@ -58,6 +62,9 @@ $(document).ready(function() {
 			rules: 'required'
 		}]);
 		
+		if(!$('input:radio[name="shipping[same_order]"]').is(':checked')) {
+			$('input:radio[name="shipping[same_order]"]:first').prop('checked',true);
+		}
 		
 		var validator = new FormValidator('order_form', order_form_validate,
 		
@@ -164,6 +171,7 @@ $(document).ready(function() {
 	
 	$("#btnFoldWrap").click(function(){
 		$("#wrap").hide();
+		$("#sl_shipping_address_detail").removeAttr('readonly');  
 	});
 	
     var element_wrap = document.getElementById('wrap');
@@ -200,8 +208,9 @@ $(document).ready(function() {
 
                 // iframe을 넣은 element를 안보이게 한다.
                 // (autoClose:false 기능을 이용한다면, 아래 코드를 제거해야 화면에서 사라지지 않는다.)
-                element_wrap.style.display = 'none';
-
+               // element_wrap.style.display = 'none';
+                $("#btnFoldWrap").click();
+                
                 // 우편번호 찾기 화면이 보이기 이전으로 scroll 위치를 되돌린다.
                 document.body.scrollTop = currentScroll;
                 
@@ -217,6 +226,7 @@ $(document).ready(function() {
 
         // iframe을 넣은 element를 보이게 한다.
         element_wrap.style.display = 'block';
+        $("#sl_shipping_zip,#sl_shipping_address_default,#sl_shipping_address_detail").attr('readonly','readonly');        
     }	
 });
 	
