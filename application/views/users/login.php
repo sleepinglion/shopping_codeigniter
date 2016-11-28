@@ -6,13 +6,13 @@
 	<div class="form-group">
 		<label for="sl_email" class="col-sm-2 control-label"><?php echo _('Email') ?></label>
 		<div class="col-sm-10">
-			<input type="text" class="form-control" id="sl_email" name="email" value="<?php echo set_value('email'); ?>" <?php /*required="required" */ ?> />
+			<input type="text" class="form-control" id="sl_email" name="email" value="<?php echo set_value('email'); ?>" <?php if(ENVIRONMENT == 'production'): ?>required="required"<?php endif ?> />
 		</div>
 	</div>
 	<div class="form-group">
 		<label for="sl_password" class="col-sm-2 control-label"><?php echo _('Password') ?></label>
 		<div class="col-sm-10">
-			<input type="password" class="form-control" id="sl_password" name="password" value="<?php echo set_value('password'); ?>" <?php /*required="required" */ ?> />
+			<input type="password" class="form-control" id="sl_password" name="password" value="<?php echo set_value('password'); ?>" <?php if(ENVIRONMENT == 'production'): ?>required="required"<?php endif ?> />
 		</div>
 	</div>
 	<div class="form-group">

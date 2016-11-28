@@ -23,13 +23,13 @@
 		<div class="form-group<?php if(form_error('password')){echo ' has-error';} ?>">
 			<label class="control-label col-sm-2" for="sl_password"><?php echo _('Password') ?></label>
 			<div class="col-sm-10">
-				<input type="password" class="form-control" id="sl_password" name="password" value="<?php echo set_value('password'); ?>" maxlength="255" <?php /*  required="required" */ ?> />
+				<input type="password" class="form-control" id="sl_password" name="password" value="<?php echo set_value('password'); ?>" maxlength="255" <?php if(ENVIRONMENT == 'production'): ?>required="required"<?php endif ?> />
 			</div>
 		</div>
 		<div class="form-group<?php if(form_error('password_confirm')){echo ' has-error';} ?>">
 			<label class="control-label col-sm-2" for="sl_password_confirm"><?php echo _('Password Confirm') ?></label>
 			<div class="col-sm-10">
-				<input type="password" class="form-control" id="sl_password_confirm" name="password_confirm" value="<?php echo set_value('password_confirm'); ?>" maxlength="255"   maxlength="255" <?php /*  required="required" */ ?> />
+				<input type="password" class="form-control" id="sl_password_confirm" name="password_confirm" value="<?php echo set_value('password_confirm'); ?>" maxlength="255"   maxlength="255" <?php if(ENVIRONMENT == 'production'): ?>required="required"<?php endif ?> />
 			</div>
 		</div>
 		<div class="form-group<?php if(form_error('name')){echo ' has-error';} ?>">
@@ -41,13 +41,13 @@
 		<div class="form-group<?php if(form_error('phone')){echo ' has-error';} ?>">
 			<label class="control-label col-sm-2" for="sl_phone"><?php echo _('Phone') ?></label>
 			<div class="col-sm-10">
-				<input type="text" class="form-control" id="sl_phone" name="phone" value="<?php echo set_value('phone'); ?>" maxlength="255"   maxlength="255" <?php /*  required="required" */ ?> />
+				<input type="text" class="form-control" id="sl_phone" name="phone" value="<?php echo set_value('phone'); ?>" maxlength="255"   maxlength="255" <?php if(ENVIRONMENT == 'production'): ?>required="required"<?php endif ?> />
 			</div>
 		</div>
 		<div class="form-group<?php if(form_error('birthday')){echo ' has-error';} ?>">
 			<label class="control-label col-sm-2" for="sl_birthday"><?php echo _('Birthday') ?></label>
 			<div class="col-sm-10">
-				<input type="date" class="form-control datepicker" data-date-end-date="-6570d" id="sl_birthday" name="birthday" value="<?php echo set_value('birthday'); ?>" <?php /*  required="required" */ ?> />
+				<input type="date" class="form-control datepicker" data-date-end-date="-6570d" id="sl_birthday" name="birthday" value="<?php echo set_value('birthday'); ?>" <?php if(ENVIRONMENT == 'production'): ?>required="required"<?php endif ?> />
 			</div>
 		</div>
 		<div class="radio">

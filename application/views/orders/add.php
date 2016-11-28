@@ -84,19 +84,19 @@
 			<div class="form-group<?php if(form_error('order[name]')){echo ' has-error';} ?>">
 				<label class="control-label col-sm-2" for="sl_order_name"><?php echo _('Name') ?></label>
 				<div class="col-sm-10">
-					<input type="text" class="form-control" id="sl_order_name" name="order[name]" value="<?php echo set_value('order[name]',$data['user']['name']) ?>" <?php if($this -> session -> userdata('user_id')): ?>readonly="readonly"<?php endif ?> <?php /* required="required" */ ?> />
+					<input type="text" class="form-control" id="sl_order_name" name="order[name]" value="<?php echo set_value('order[name]',$data['user']['name']) ?>" <?php if($this -> session -> userdata('user_id')): ?>readonly="readonly"<?php endif ?> <?php if(ENVIRONMENT == 'production'): ?>required="required"<?php endif ?> />
 				</div>
 			</div>		
 			<div class="form-group<?php if(form_error('order[email]')){echo ' has-error';} ?>">
 				<label class="control-label col-sm-2" for="sl_order_email"><?php echo _('Email') ?></label>
 				<div class="col-sm-10">
-					<input type="text" class="form-control" id="sl_order_email" name="order[email]" value="<?php echo set_value('order[email]',$data['user']['email']) ?>" <?php if($this -> session -> userdata('user_id')): ?>readonly="readonly"<?php endif ?> <?php /* required="required" */ ?> />
+					<input type="text" class="form-control" id="sl_order_email" name="order[email]" value="<?php echo set_value('order[email]',$data['user']['email']) ?>" <?php if($this -> session -> userdata('user_id')): ?>readonly="readonly"<?php endif ?> <?php if(ENVIRONMENT == 'production'): ?>required="required"<?php endif ?> />
 				</div>
 			</div>
 			<div class="form-group<?php if(form_error('order[phone]')){echo ' has-error';} ?>">
 				<label class="control-label col-sm-2" for="sl_order_phone"><?php echo _('Phone') ?></label>
 				<div class="col-sm-10">
-					<input type="text" class="form-control" id="sl_order_phone" name="order[phone]" value="<?php echo set_value('order[phone]',$data['user']['phone']) ?>" <?php if($this -> session -> userdata('user_id')): ?>readonly="readonly"<?php endif ?> <?php /* required="required" */ ?> />
+					<input type="text" class="form-control" id="sl_order_phone" name="order[phone]" value="<?php echo set_value('order[phone]',$data['user']['phone']) ?>" <?php if($this -> session -> userdata('user_id')): ?>readonly="readonly"<?php endif ?> <?php if(ENVIRONMENT == 'production'): ?>required="required"<?php endif ?> />
 				</div>
 			</div>
 			</div>
@@ -119,13 +119,13 @@
 			<div class="form-group<?php if(form_error('shipping[name]')){echo ' has-error';} ?>">
 				<label class="control-label col-sm-2" for="sl_shipping_name"><?php echo _('Name') ?></label>
 				<div class="col-sm-10">
-					<input type="text" class="form-control" id="sl_shipping_name" name="shipping[name]" value="<?php echo set_value('shipping[name]',$data['user']['name']) ?>" readonly="readonly" <?php /* required="required" */ ?> />
+					<input type="text" class="form-control" id="sl_shipping_name" name="shipping[name]" value="<?php echo set_value('shipping[name]',$data['user']['name']) ?>" readonly="readonly" <?php if(ENVIRONMENT == 'production'): ?>required="required"<?php endif ?> />
 				</div>
 			</div>
 			<div class="form-group<?php if(form_error('shipping[zip_code]') OR form_error('shipping[address_default]') OR form_error('shipping[address_detail]')){echo ' has-error';} ?>">
 				<label class="control-label col-xs-12  col-sm-2" for="sl_shipping_address"><?php echo _('label_address') ?></label>
 				<div class="col-xs-6 col-sm-3">
-					<input type="text" class="form-control" id="sl_shipping_zip" name="shipping[zip_code]" placeholder="<?php echo _('Zip Code') ?>" value="<?php echo set_value('shipping[zip_code]') ?>" maxlength="5" <?php /* required="required" */ ?> />
+					<input type="text" class="form-control" id="sl_shipping_zip" name="shipping[zip_code]" placeholder="<?php echo _('Zip Code') ?>" value="<?php echo set_value('shipping[zip_code]') ?>" maxlength="5" <?php if(ENVIRONMENT == 'production'): ?>required="required"<?php endif ?> />
 				</div>
 				<div class="col-xs-6 col-sm-3" id="find_zip">
 					<input type="button" class="btn btn-default" value="<?php echo _('Find Zip') ?>" />					
@@ -136,28 +136,28 @@
 					</div>					
 				</div>
 				<div class="col-sm-10 col-sm-offset-2" style="clear:both;padding-top:10px">
-					<input type="text" class="form-control" id="sl_shipping_address_default" name="shipping[address_default]" placeholder="<?php echo _('Default Address') ?>" value="<?php echo set_value('shipping[address_default]') ?>" <?php /* required="required" */ ?> />
+					<input type="text" class="form-control" id="sl_shipping_address_default" name="shipping[address_default]" placeholder="<?php echo _('Default Address') ?>" value="<?php echo set_value('shipping[address_default]') ?>" <?php if(ENVIRONMENT == 'production'): ?>required="required"<?php endif ?> />
 				</div>
 				<div class="col-sm-10 col-sm-offset-2" style="margin-top:10px">
-					<input type="text" class="form-control" id="sl_shipping_address_detail" name="shipping[address_detail]" placeholder="<?php echo _('Detail Address') ?>" value="<?php echo set_value('shipping[address_detail]') ?>" <?php /* required="required" */ ?> />
+					<input type="text" class="form-control" id="sl_shipping_address_detail" name="shipping[address_detail]" placeholder="<?php echo _('Detail Address') ?>" value="<?php echo set_value('shipping[address_detail]') ?>" <?php if(ENVIRONMENT == 'production'): ?>required="required"<?php endif ?> />
 				</div>								
 			</div>
 			<div class="form-group<?php if(form_error('shipping[email]')){echo ' has-error';} ?>">
 				<label class="control-label col-sm-2" for="sl_shipping_email"><?php echo _('Email') ?></label>
 				<div class="col-sm-10">
-					<input type="text" class="form-control" id="sl_shipping_email" name="shipping[email]" value="<?php echo set_value('shipping[email]',$data['user']['email']) ?>" readonly="readonly" <?php /* required="required" */ ?> />
+					<input type="text" class="form-control" id="sl_shipping_email" name="shipping[email]" value="<?php echo set_value('shipping[email]',$data['user']['email']) ?>" readonly="readonly" <?php if(ENVIRONMENT == 'production'): ?>required="required"<?php endif ?> />
 				</div>
 			</div>
 			<div class="form-group<?php if(form_error('shipping[phone]')){echo ' has-error';} ?>">
 				<label class="control-label col-sm-2" for="sl_shipping_phone"><?php echo _('Phone') ?></label>
 				<div class="col-sm-10">
-					<input type="text" class="form-control" id="sl_shipping_phone" name="shipping[phone]" value="<?php echo set_value('shipping[phone]',$data['user']['phone']) ?>" readonly="readonly" <?php /* required="required" */ ?> />
+					<input type="text" class="form-control" id="sl_shipping_phone" name="shipping[phone]" value="<?php echo set_value('shipping[phone]',$data['user']['phone']) ?>" readonly="readonly" <?php if(ENVIRONMENT == 'production'): ?>required="required"<?php endif ?> />
 				</div>
 			</div>
 			<div class="form-group<?php if(form_error('shipping[message]')){echo ' has-error';} ?>">
 				<label class="control-label col-sm-2" for="sl_shipping_message"><?php echo _('label_shipping_message') ?></label>
 				<div class="col-sm-10">
-					<textarea class="form-control" id="sl_shipping_message" name="shipping[message]" <?php /* required="required" */ ?>><?php echo set_value('shipping[message]') ?></textarea>
+					<textarea class="form-control" id="sl_shipping_message" name="shipping[message]" <?php if(ENVIRONMENT == 'production'): ?>required="required"<?php endif ?>><?php echo set_value('shipping[message]') ?></textarea>
 				</div>
 			</div>
 			</div>	
