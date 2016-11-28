@@ -46,6 +46,9 @@ class HAuth extends CI_Controller {
 		}
 		catch(Exception $e)
 		{
+		/*	echo '<pre>';
+			print_r($e);
+			echo '</pre>'; */
 			$error = 'Unexpected error';
 			switch($e->getCode())
 			{
