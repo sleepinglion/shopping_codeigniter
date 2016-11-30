@@ -37,7 +37,9 @@
 			</div>
 		</div>
 	</article>
-	<input type="submit" class="btn btn-primary btn-lg" value="<?php echo _('Order Form Submit') ?>" />	
+	<div class="section_bottom">
+		<input type="submit" class="btn btn-primary btn-lg" value="<?php echo _('Order Form Submit') ?>" />
+	</div>	
 	<?php echo form_close() ?>
 	<?php endforeach ?>	
 	<?php else: ?>
