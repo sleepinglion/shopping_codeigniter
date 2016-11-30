@@ -26,7 +26,6 @@
 	<div id="mom">
 		<div id="main" class="container">					
 		<?php if($this -> router -> fetch_class()=='home'): ?>
-		<hr class="none">
 		<div id="main_main">
 			<?php echo $contents_for_layout ?>
 		</div>
@@ -39,8 +38,7 @@
 		</div>
 	</div>
 	<?php echo $Layout->element('footer') ?>
-<div class="slboard_overlay" id="overlay"></div>
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog"></div>	
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog"></div>	
 	<?php echo "\n".$script_for_layout."\n" ?>
 </body>
 </html>
