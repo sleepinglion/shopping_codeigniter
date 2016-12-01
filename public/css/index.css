@@ -86,8 +86,8 @@ aside .box {margin-top:0}
 #sl_order_add .section_bottom {margin-top:30px}
 #sl_order_add .product {float:left;width:100%;background:#eee;border-radius:5px;padding:20px;margin-bottom:20px}
 #sl_order_add .product figcaption {display:block;width:1px;height:1px;text-indent:-9999px}
-#sl_order_add .product .product_image {float:left;width:20%}
-#sl_order_add .product .product_text {float:left;width:80%}
+#sl_order_add .product .product_image {float:left;width:25%}
+#sl_order_add .product .product_text {float:right;width:73%}
 #sl_order_add .product .product_text h4 {border-bottom:1px solid #ccc;padding:5px 0}
 #sl_order_add .product .product_text .product_price {float:right;}
 #sl_order_add .product .product_text .product_description {clear:both}

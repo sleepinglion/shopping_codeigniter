@@ -13,12 +13,12 @@
 					<a href="#">
 						<?php if(isset($product['photo_list'][0])): ?>
 						<figure>
-							<img src="<?php echo base_url() ?>uploads/product_picture/<?php echo $product['photo_list'][0]['id'] ?>/medium_thumb_<?php echo $product['photo_list'][0]['photo'] ?>" width="" height="" class="img-rounded" />
+							<img src="<?php echo base_url() ?>uploads/product_picture/<?php echo $product['photo_list'][0]['id'] ?>/medium_thumb_<?php echo $product['photo_list'][0]['photo'] ?>" width="250" height="250" class="img-rounded" />
 							<figcaption><?php echo $product['title'] ?></figcaption>
 						</figure>
 						<?php else: ?>
 						<figure>
-							<img src="" width="" height="" class="img-rounded" />
+							<img src="" width="250" height="250" class="img-rounded" />
 							<figcaption><?php echo _('No Image') ?></figcaption>
 						</figure>
 						<?php endif ?>
