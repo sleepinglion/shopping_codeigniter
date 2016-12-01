@@ -10,7 +10,7 @@ class Orders extends SL_Controller {
 		$this -> set_message();
 
 		if ($this -> input -> get('product[id]')) {
-			$this -> load -> model('Product');	
+			$this -> load -> model('Product');
 
 			if (!$this -> Product -> get_count($this -> input -> get('product[id]')))
 				show_404();
@@ -58,6 +58,9 @@ class Orders extends SL_Controller {
 			$this -> load -> model('Product');
 
 			if ($this -> input -> get('product[id]')) {
+				if (!$this -> Product -> get_count($this -> input -> get('product[id]')))
+					show_404();
+				
 				$product = $this -> Product -> get_content($this -> input -> get('product[id]'));
 				$products = array('list' => array($product));
 			} else {

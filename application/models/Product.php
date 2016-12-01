@@ -36,6 +36,10 @@ class Product extends CI_Model {
 		$this -> pdo -> where(array('products.id' => $id));
 		$query = $this -> pdo -> get();
 		$result = $query -> result_array();
+		
+		$this -> pdo -> where(array('product_pictures.enable' => TRUE,'product_pictures.product_id'=>$id));
+		$query = $this -> pdo -> get('product_pictures');
+		$result[0]['photo_list']= $query -> result_array();
 
 		return $result[0];
 	}	
