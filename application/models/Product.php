@@ -23,6 +23,14 @@ class Product extends CI_Model {
 		return $result;
 	}
 	
+	public function get_count($id = NULL) {
+		if (isset($id)) {
+			$this -> pdo -> where(array('products.id' => $id));
+		}
+
+		return $this -> pdo -> count_all_results('products');
+	}	
+	
 	public function get_content($id) {
 		$this -> pdo -> from('products');
 		$this -> pdo -> where(array('products.id' => $id));

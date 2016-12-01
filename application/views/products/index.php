@@ -1,7 +1,7 @@
 <section id="product_index">
 	<?php if(count($data['list'])): ?>
 	<?php foreach($data['list'] as $index=>$product): ?>
-	<?php echo form_open('orders/add', array('class' => 'form-horizontal','id'=>'order_form')) ?>
+	<?php echo form_open('orders/add', array('method'=>'get','class' => 'order_form form-horizontal')) ?>
 	<article class="panel panel-default product">
 		<div class="panel-heading">
 			<h3 class="panel-title"><?php echo $product['title'] ?></h3>

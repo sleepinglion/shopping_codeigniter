@@ -15,7 +15,10 @@
 						<figcaption><?php echo $product['title'] ?></figcaption>
 					</figure>
 					<?php else: ?>
-					이미지 없음
+					<figure>
+						<img src="" width="" height="" class="img-rounded" />
+						<figcaption><?php echo _('No Image') ?></figcaption>
+					</figure>
 					<?php endif ?>
 				</div>
 				<div class="product_text">

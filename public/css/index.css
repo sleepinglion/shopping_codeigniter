@@ -93,6 +93,8 @@ aside .box {margin-top:0}
 #sl_order_add .product .product_text .product_description {clear:both}
 #sl_order_add table caption {width:1px;height:1px;text-indent:-9999px}
 #find_zip {margin-left:0;padding-left:0}
+
+.order_form {margin-bottom:3%}
 	
 @media all and (max-width: 768px) {
 	html,body {background:#ccc}

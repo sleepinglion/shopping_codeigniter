@@ -9,8 +9,13 @@ class Orders extends SL_Controller {
 		$this -> load -> library('form_validation');
 		$this -> set_message();
 
-		if ($this -> input -> post('product[id]')) {
-			$product_quantity=$this->input->post('product[quantity]');
+		if ($this -> input -> get('product[id]')) {
+			$this -> load -> model('Product');	
+
+			if (!$this -> Product -> get_count($this -> input -> get('product[id]')))
+				show_404();
+		
+			$product_quantity=$this->input->get('product[quantity]');
 		} else {
 			$this -> form_validation -> set_rules('order[name]', _('Order Name'), 'required|min_length[2]|max_length[60]');
 			$this -> form_validation -> set_rules('order[email]', _('Order Email'), 'required|valid_email');
@@ -52,8 +57,8 @@ class Orders extends SL_Controller {
 		if ($this -> form_validation -> run() == FALSE) {
 			$this -> load -> model('Product');
 
-			if ($this -> input -> post('product[id]')) {
-				$product = $this -> Product -> get_content($this -> input -> post('product[id]'));
+			if ($this -> input -> get('product[id]')) {
+				$product = $this -> Product -> get_content($this -> input -> get('product[id]'));
 				$products = array('list' => array($product));
 			} else {
 				$products = $this -> Product -> get_index();
