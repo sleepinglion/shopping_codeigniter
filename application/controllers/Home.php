@@ -11,8 +11,8 @@ class Home extends SL_Controller {
 		$this -> layout -> add_js(base_url() . 'js/plugin/jquery.tagcanvas.min.js');
 		$this -> layout -> add_js(base_url() . 'js/index.js');
 
-		if (ENVIRONMENT == 'production')
-			$this -> output -> cache(1200);
+		//if (ENVIRONMENT == 'production')
+		//	$this -> output -> cache(1200);
 
 		$this -> layout -> render('home/index', $this -> return_data);
 	}

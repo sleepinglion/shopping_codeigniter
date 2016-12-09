@@ -159,9 +159,6 @@ class Users extends SL_Controller {
 		$this -> layout -> add_js(base_url() . 'js/validate.min.js');
 		$this -> layout -> add_js(base_url() . 'js/users/login.js');
 		
-		if (ENVIRONMENT == 'production')
-			$this -> output -> cache(1200);		
-		
 		$this -> layout -> render('users/login', $this -> return_data);
 	}
 
