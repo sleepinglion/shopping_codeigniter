@@ -23,8 +23,12 @@ class Gene extends CI_Model {
 		$result=array();
 		$result['total'] = $this -> pdo -> count_all_results('genes');
 		
+		$this -> pdo -> select('genes.*');
+		$this -> pdo -> join('gene_categories_genes','genes.id=gene_categories_genes.gene_id');
+		$this -> pdo -> where(array('gene_categories_genes.gene_category_id' =>$category_id,'genes.enable' => TRUE));
 		$query = $this -> pdo -> get('genes');
 		$result['list'] = $query -> result_array();
+		
 		return $result;
 		
 	}	

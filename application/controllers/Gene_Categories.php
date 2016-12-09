@@ -29,6 +29,9 @@ class Gene_Categories extends SL_Controller {
 		$this -> load -> model('Gene');
 		$this -> return_data['data']['genes']=$this->Gene->get_index($this -> return_data['data']['content']['id']);
 		
+		$this -> load -> model('GeneRelation');
+		$this -> return_data['data']['genes']=$this->GeneRelation->get_index($this -> return_data['data']['genes']);
+		
 		$this -> layout -> render($this -> router -> fetch_class() . '/view', $this -> return_data);
 	}
 }

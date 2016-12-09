@@ -14,7 +14,7 @@
 				<ul class="nav nav-pills">
 					<li <?php echo sl_active_class(array('products','orders')) ?>><?php echo anchor('products', _('Product').'<span class="visible-xs glyphicon glyphicon-chevron-right pull-right"></span>', array('title' => _('Product'))) ?></li>
 					<?php if($this->session->userdata('user_id')): ?>
-					<li <?php echo sl_active_class(array('users','reports')) ?>><?php echo anchor('users', _('My Page').'<span class="visible-xs glyphicon glyphicon-chevron-right pull-right"></span>', array('title' => _('My Page'))) ?></li>
+					<li <?php echo sl_active_class(array('users','reports','gene_categories')) ?>><?php echo anchor('users', _('My Page').'<span class="visible-xs glyphicon glyphicon-chevron-right pull-right"></span>', array('title' => _('My Page'))) ?></li>
 					<?php else: ?>
 					<li <?php echo sl_active_class('users') ?>><?php echo anchor('users/add', _('User Add').'<span class="visible-xs glyphicon glyphicon-chevron-right pull-right"></span>', array('title' => _('User Add'))) ?></li>
 					<?php endif ?>

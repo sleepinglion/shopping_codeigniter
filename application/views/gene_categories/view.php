@@ -9,5 +9,31 @@
 			<?php echo $data['content']['tip'] ?>
 		</div>
 	</article>
+	<?php if($data['genes']['total']): ?>
+	<?php foreach($data['genes']['list'] as $index=>$value): ?>
+	<article  style="float:left;width:100%">
+		<div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+			<h4><?php echo $value['title'] ?><br /><?php echo $value['sub_title'] ?></h4>
+			<?php if($value['gene_relations']['total']): ?>
+			<div>
+				<h5>관련대사</h5>
+				<ul>				
+			<?php foreach($value['gene_relations']['list'] as $gene_relation): ?>
+					<li><?php echo $gene_relation['title'] ?></li>						
+			<?php endforeach ?>
+				</ul>
+			</div>
+			<?php endif ?>
+		</div>
+		<div class="col-xs-12 col-sm-8 col-md-9 col-lg-10">
+			<p style="border-top:1px solid #99ccff;padding:10px;background:#eee">
+				::주의유전형발견시::&nbsp;&nbsp;&nbsp;<?php echo $value['description'] ?>
+			</p>
+		</div>
+	</article>
+	<?php endforeach ?>
+	<?php endif ?>
 	<div style="clear:both">&nbsp;</div>
+	
+	
 </section>
