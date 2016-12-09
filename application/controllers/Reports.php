@@ -3,13 +3,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 require 'SL.php';
 
 class Reports extends SL_Controller {
-	protected $model = 'Product';
+	protected $model = 'Report';
 	
 	public function index($page = 0) {
-		//$this -> load -> model('Reports');
-		//$reports=$this -> Reports -> get_index();
+		$this -> load -> model('Order');
+		$orders=$this -> Order -> get_index($this->session->userdata('user_id'));
 		
-		//$this -> return_data['data']=$reports;
+		$this -> return_data['data']=$orders;
 		$this -> layout -> render('reports/index', $this -> return_data);
 	}
+	
+	public function view($id) {
+		$this -> load -> model('Report');
+		$reports=$this -> Report -> get_content($id);
+		
+		$this -> return_data['data']=$reports;
+		$this -> layout -> render('reports/view', $this -> return_data);
+	}	
 }

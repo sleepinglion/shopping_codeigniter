@@ -65,6 +65,7 @@ $route['communities/comments/comments/delete/(:num)']='community_comment_comment
 $route['admin']='admin/dashboard';
 $route['reports/(:num)'] = 'reports/view/$1';
 $route['productions/(:num)'] = 'productions/view/$1';
+$route['gene_categories/(:num)'] = 'gene_categories/view/$1';
 $route['notices/(:num)'] = 'notices/view/$1';
 $route['users/(:num)'] = 'users/view/$1';
 

@@ -8,6 +8,16 @@ class Order extends CI_Model {
 
 	public function __construct() {
 		$this -> pdo = $this -> load -> database('pdo', TRUE);
+	}	
+	
+	public function get_index($user_id) {
+		$this -> pdo -> where(array('orders.user_id' =>$user_id,'orders.enable' => TRUE));
+		
+		$result['total'] = $this -> pdo -> count_all_results('orders');
+		
+		$query = $this -> pdo -> get('orders');
+		$result['list'] = $query -> result_array();
+		return $result;
 	}
 
 	public function insert(Array $data) {
