@@ -2,8 +2,8 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 require 'SL.php';
 
-class Gene_Categories extends SL_Controller {
-	protected $model = 'GeneCategory';
+class Gene_categories extends SL_Controller {
+	protected $model = 'Gene_category';
 
 	public function index($page = 0) {
 		$this -> load -> model('Product');
@@ -29,8 +29,8 @@ class Gene_Categories extends SL_Controller {
 		$this -> load -> model('Gene');
 		$this -> return_data['data']['genes']=$this->Gene->get_index($this -> return_data['data']['content']['id']);
 		
-		$this -> load -> model('GeneRelation');
-		$this -> return_data['data']['genes']=$this->GeneRelation->get_index($this -> return_data['data']['genes']);
+		$this -> load -> model('Gene_relation');
+		$this -> return_data['data']['genes']=$this->Gene_relation->get_index($this -> return_data['data']['genes']);
 		
 		$this -> layout -> render($this -> router -> fetch_class() . '/view', $this -> return_data);
 	}
