@@ -24,7 +24,7 @@ set :format_options, command_output: true, log_file: 'application/logs/capistran
 set :pty, true
 
 # Default value for :linked_files is []
-append :linked_files, 'application/config/config.php', 'application/config/database.php','application/helpers/sl_helper.php', 'public/.htaccess'
+append :linked_files, 'application/config/config.php', 'application/config/database.php', 'public/.htaccess'
 
 # Default value for linked_dirs is []
 append :linked_dirs, 'public/uploads', 'application/logs'
