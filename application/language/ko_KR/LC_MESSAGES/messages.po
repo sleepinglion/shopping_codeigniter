@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: genomics_shopping\n"
-"POT-Creation-Date: 2016-11-28 15:12+0900\n"
-"PO-Revision-Date: 2016-11-28 15:12+0900\n"
+"POT-Creation-Date: 2016-12-12 15:47+0900\n"
+"PO-Revision-Date: 2016-12-12 15:47+0900\n"
 "Last-Translator: \n"
 "Language-Team: genomics\n"
 "Language: ko\n"
@@ -15,71 +15,71 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: controllers/Orders.php:15
+#: controllers/Orders.php:20
 msgid "Order Name"
 msgstr "이름(주문정보)"
 
-#: controllers/Orders.php:16
+#: controllers/Orders.php:21
 msgid "Order Email"
 msgstr "이메일(주문정보)"
 
-#: controllers/Orders.php:17
+#: controllers/Orders.php:22
 msgid "Order Phone"
 msgstr "전화번호(주문정보)"
 
-#: controllers/Orders.php:18
+#: controllers/Orders.php:23
 msgid "Order Payment"
 msgstr "결제수단"
 
-#: controllers/Orders.php:20
+#: controllers/Orders.php:25
 msgid "Shipping Same"
 msgstr "동일, 동일하지 않음(배송정보)를 선택해주세요"
 
-#: controllers/Orders.php:21
+#: controllers/Orders.php:26
 msgid "Shipping Name"
 msgstr "이름(배송정보)"
 
-#: controllers/Orders.php:22
+#: controllers/Orders.php:27
 msgid "Shipping Zip"
 msgstr "우편번호(배송정보)"
 
-#: controllers/Orders.php:23
+#: controllers/Orders.php:28
 msgid "Shipping Address Default"
 msgstr "기본주소(배송정보)"
 
-#: controllers/Orders.php:24
+#: controllers/Orders.php:29
 msgid "Shipping Address Detail"
 msgstr "상세주소(배송정보)"
 
-#: controllers/Orders.php:25
+#: controllers/Orders.php:30
 msgid "Shipping Email"
 msgstr "이메일(배송정보)"
 
-#: controllers/Orders.php:26
+#: controllers/Orders.php:31
 msgid "Shipping Phone"
 msgstr "전화번호(배송정보)"
 
-#: controllers/Orders.php:40 views/layout/elements/header.php:15
-#: views/orders/add.php:4
+#: controllers/Orders.php:45 views/layout/elements/header.php:15
+#: views/orders/add.php:5
 msgid "Product"
 msgstr "제품"
 
-#: controllers/Orders.php:41 views/orders/add.php:22 views/orders/add.php:45
-#: views/products/index.php:20
+#: controllers/Orders.php:46 views/orders/add.php:27 views/orders/add.php:50
+#: views/products/index.php:30
 msgid "Quantity"
 msgstr "수량"
 
-#: controllers/Orders.php:45 views/orders/add.php:166
+#: controllers/Orders.php:50 views/orders/add.php:177
 msgid "No User Agreement"
 msgstr "비회원 구매 정보 수집 동의"
 
-#: controllers/Orders.php:45 controllers/Orders.php:47 controllers/Users.php:33
+#: controllers/Orders.php:50 controllers/Orders.php:52 controllers/Users.php:33
 #: controllers/Users.php:34 controllers/Users.php:35
 #, php-format
 msgid "Please Agree %s"
 msgstr "\"%s\"(을)를 동의해주세요"
 
-#: controllers/Orders.php:47 views/orders/add.php:174
+#: controllers/Orders.php:52 views/orders/add.php:185
 msgid "Order Agreement"
 msgstr ""
 "상기 주문 내역에 대한 모든 정보(서비스명, 가격, 배송정보)를 확인하였으며, 구"
@@ -151,15 +151,15 @@ msgstr "게시물이 수정되었습니다."
 msgid "My Page"
 msgstr "내페이지"
 
-#: controllers/Users.php:21 controllers/Users.php:117 views/orders/add.php:87
-#: views/orders/add.php:140 views/users/add.php:5 views/users/add.php:6
-#: views/users/add.php:7 views/users/add.php:13 views/users/edit.php:24
+#: controllers/Users.php:21 controllers/Users.php:117 views/orders/add.php:94
+#: views/orders/add.php:149 views/users/add.php:5 views/users/add.php:6
+#: views/users/add.php:7 views/users/add.php:15 views/users/edit.php:26
 #: views/users/login.php:7
 msgid "Email"
 msgstr "이메일"
 
 #: controllers/Users.php:22 controllers/Users.php:64 controllers/Users.php:118
-#: views/questions/add.php:11 views/users/add.php:22 views/users/edit.php:30
+#: views/questions/add.php:11 views/users/add.php:24 views/users/edit.php:32
 #: views/users/login.php:13
 msgid "Password"
 msgstr "비밀번호"
@@ -168,19 +168,19 @@ msgstr "비밀번호"
 msgid "Password Confirmation"
 msgstr "비밀번호확인"
 
-#: controllers/Users.php:24 controllers/Users.php:68 views/orders/add.php:81
-#: views/orders/add.php:114 views/questions/add.php:7
-#: views/questions/index.php:13 views/users/add.php:34 views/users/edit.php:42
+#: controllers/Users.php:24 controllers/Users.php:68 views/orders/add.php:88
+#: views/orders/add.php:123 views/questions/add.php:7
+#: views/questions/index.php:13 views/users/add.php:36 views/users/edit.php:44
 msgid "Name"
 msgstr "이름"
 
-#: controllers/Users.php:25 controllers/Users.php:69 views/orders/add.php:93
-#: views/orders/add.php:146 views/users/add.php:40 views/users/edit.php:48
+#: controllers/Users.php:25 controllers/Users.php:69 views/orders/add.php:100
+#: views/orders/add.php:155 views/users/add.php:42 views/users/edit.php:50
 msgid "Phone"
 msgstr "전화번호"
 
 #: controllers/Users.php:26 controllers/Users.php:27 controllers/Users.php:70
-#: views/users/add.php:46 views/users/edit.php:54
+#: views/users/add.php:48 views/users/edit.php:56
 msgid "Birthday"
 msgstr "생일"
 
@@ -189,31 +189,31 @@ msgstr "생일"
 msgid "%s Must Validate Date ex) Y-m-d"
 msgstr "%s(은)는 유효한 날짜형식이여야 합니다. 예) 1981-06-02"
 
-#: controllers/Users.php:28 controllers/Users.php:71 views/users/add.php:52
-#: views/users/edit.php:60
+#: controllers/Users.php:28 controllers/Users.php:71 views/users/add.php:54
+#: views/users/edit.php:62
 msgid "Sex"
 msgstr "성별"
 
-#: controllers/Users.php:30 controllers/Users.php:73 views/users/add.php:68
-#: views/users/edit.php:76
+#: controllers/Users.php:30 controllers/Users.php:73 views/users/add.php:72
+#: views/users/edit.php:80
 msgid "Height"
 msgstr "키"
 
-#: controllers/Users.php:31 controllers/Users.php:74 views/users/add.php:74
-#: views/users/edit.php:82
+#: controllers/Users.php:31 controllers/Users.php:74 views/users/add.php:78
+#: views/users/edit.php:86
 msgid "Weight"
 msgstr "몸무게"
 
-#: controllers/Users.php:33 views/users/add.php:87
+#: controllers/Users.php:33 views/users/add.php:93
 msgid "OverAge18 Agreement"
 msgstr "18세 미만의 미성년자의 경우 제로믹스 서비스를 이용하실 수 없습니다"
 
-#: controllers/Users.php:34 views/users/add.php:94
+#: controllers/Users.php:34 views/users/add.php:100
 #: views/users/see_agree_service.php:5
 msgid "Service Agreement"
 msgstr "서비스 이용약관"
 
-#: controllers/Users.php:35 views/users/add.php:101
+#: controllers/Users.php:35 views/users/add.php:107
 #: views/users/see_agree_information.php:5
 msgid "Personal Information Agreement"
 msgstr "개인정보 처리방침"
@@ -225,9 +225,9 @@ msgstr "회원가입"
 #: controllers/Users.php:70
 #, php-format
 msgid "%s Must Validate Date"
-msgstr ""
+msgstr "%s는 유효한 날짜이여야합니다."
 
-#: controllers/Users.php:77 views/users/index.php:10
+#: controllers/Users.php:77 views/users/index.php:15
 msgid "Edit User"
 msgstr "프로필 수정하기"
 
@@ -244,7 +244,7 @@ msgstr "아이디 또는 비밀번호가 맞지않습니다."
 msgid "Login"
 msgstr "로그인"
 
-#: controllers/Users.php:183
+#: controllers/Users.php:180
 msgid "Already Exists Email"
 msgstr "이미 존재하는 이메일입니다"
 
@@ -267,6 +267,55 @@ msgstr "내용"
 #: models/SL.php:110
 msgid "Title+Content"
 msgstr "제목+내용"
+
+#: views/gene_categories/view.php:8
+#, php-format
+msgid "%s is analysised total %s, %s analysised %s needs %s"
+msgstr ""
+"%s 항목은 총 %s가지 유전자가 분석이 되었습니다.<br />유전자의 분석값을 종합"
+"한 결과<br />%s님의 <b>%s</b> 분석값은 <b class=\"report_category\">%s</b>입"
+"니다."
+
+#: views/gene_categories/view.php:20
+#, php-format
+msgid "%s related gene analysis is"
+msgstr "%s에 관여하는 유전자의 분석결과는 다음과 같습니다."
+
+#: views/gene_categories/view.php:28
+#, php-format
+msgid "So %s`s %s result is %s"
+msgstr ""
+"위와 같이 유전자를 분석하여 종합한 결과<br />%s님의 %s항목의 분석값은 <b>%s</"
+"b>입니다."
+
+#: views/gene_categories/view.php:46
+msgid "Gene Relation"
+msgstr "관여 유전자"
+
+#: views/gene_categories/view.php:47
+msgid "Gene Title"
+msgstr "유전자명"
+
+#: views/gene_categories/view.php:67
+#, php-format
+msgid "%s Relation %s Default Gene is %s,Warning Gene is %s"
+msgstr ""
+"%s 관여유전자인 %s유전자의 유전형은 %s형을 가지게됩니다.<br />이곳에 %s의 유"
+"전형이 발견되면 <span>주의 유전형</span>으로 표기됩니다."
+
+#: views/gene_categories/view.php:69
+#, php-format
+msgid "%s Your have Gene %s"
+msgstr "%s님은 %s의 유전형을 가지고 있습니다."
+
+#: views/gene_categories/view.php:75
+msgid "Asian Have This Gene "
+msgstr "아시아인들은 다음과 같은 비율로 해당 유전형을 가지고 있습니다."
+
+#: views/gene_categories/view.php:77
+#, php-format
+msgid "%s Asia Gene Percentage %s"
+msgstr "아시아에서 %s님의 유전형과 같은 사람들의 비율은 %s입니다."
 
 #: views/layout/elements/footer.php:3
 msgid "Footer Address"
@@ -405,100 +454,100 @@ msgstr "신규작성"
 msgid "label_created_at"
 msgstr "작성일"
 
-#: views/orders/add.php:33
-msgid "Calculator Table"
-msgstr "계산표"
-
-#: views/orders/add.php:43
-msgid "Product Name"
-msgstr "제품명"
-
-#: views/orders/add.php:44
-msgid "Product Price"
-msgstr "제품가격"
-
-#: views/orders/add.php:46
-msgid "Shipping Cost"
-msgstr "배송비"
-
-#: views/orders/add.php:47
-msgid "Total Cost"
-msgstr "합계"
-
-#: views/orders/add.php:58 views/orders/add.php:60 views/orders/add.php:61
-#: views/orders/add.php:68
-msgid "Currency"
-msgstr "원"
-
-#: views/orders/add.php:67
-msgid "All Total Cost"
-msgstr "총합계"
-
-#: views/orders/add.php:78
-msgid "Order Info"
-msgstr "주문정보"
-
-#: views/orders/add.php:101
-msgid "Shipping Info"
-msgstr "배송정보"
-
-#: views/orders/add.php:106
-msgid "Same Member"
-msgstr "회원정보와 동일"
-
-#: views/orders/add.php:106
-msgid "Same Order"
-msgstr "주문정보와 동일"
-
-#: views/orders/add.php:109
-msgid "Not Same Member"
-msgstr "회원정보와 동일하지 않음"
-
-#: views/orders/add.php:109
-msgid "Not Same Order"
-msgstr "주문정보와 동일하지 않음"
-
-#: views/orders/add.php:120
-msgid "label_address"
-msgstr "주소"
-
-#: views/orders/add.php:122
-msgid "Zip Code"
-msgstr "우편번호"
-
-#: views/orders/add.php:125
-msgid "Find Zip"
-msgstr "우편번호 찾기"
-
-#: views/orders/add.php:133
-msgid "Default Address"
-msgstr "기본주소"
-
-#: views/orders/add.php:136
-msgid "Detail Address"
-msgstr "상세주소"
-
-#: views/orders/add.php:152
-msgid "label_shipping_message"
-msgstr "배송메세지"
-
-#: views/orders/add.php:160
-msgid "Agree Order"
-msgstr "구매동의"
-
-#: views/orders/add.php:180
-msgid "Payment"
-msgstr "결제정보"
-
-#: views/orders/add.php:194 views/products/index.php:28
-msgid "Order Form Submit"
-msgstr "주문하기"
-
-#: views/products/index.php:14
+#: views/orders/add.php:20 views/products/index.php:22
 msgid "No Image"
 msgstr "이미지 없음"
 
-#: views/products/index.php:32
+#: views/orders/add.php:38
+msgid "Calculator Table"
+msgstr "계산표"
+
+#: views/orders/add.php:48
+msgid "Product Name"
+msgstr "제품명"
+
+#: views/orders/add.php:49
+msgid "Product Price"
+msgstr "제품가격"
+
+#: views/orders/add.php:51
+msgid "Shipping Cost"
+msgstr "배송비"
+
+#: views/orders/add.php:52
+msgid "Total Cost"
+msgstr "합계"
+
+#: views/orders/add.php:63 views/orders/add.php:65 views/orders/add.php:66
+#: views/orders/add.php:73
+msgid "Currency"
+msgstr "원"
+
+#: views/orders/add.php:72
+msgid "All Total Cost"
+msgstr "총합계"
+
+#: views/orders/add.php:84
+msgid "Order Info"
+msgstr "주문정보"
+
+#: views/orders/add.php:109
+msgid "Shipping Info"
+msgstr "배송정보"
+
+#: views/orders/add.php:115
+msgid "Same Member"
+msgstr "회원정보와 동일"
+
+#: views/orders/add.php:115
+msgid "Same Order"
+msgstr "주문정보와 동일"
+
+#: views/orders/add.php:118
+msgid "Not Same Member"
+msgstr "회원정보와 동일하지 않음"
+
+#: views/orders/add.php:118
+msgid "Not Same Order"
+msgstr "주문정보와 동일하지 않음"
+
+#: views/orders/add.php:129
+msgid "label_address"
+msgstr "주소"
+
+#: views/orders/add.php:131
+msgid "Zip Code"
+msgstr "우편번호"
+
+#: views/orders/add.php:134
+msgid "Find Zip"
+msgstr "우편번호 찾기"
+
+#: views/orders/add.php:142
+msgid "Default Address"
+msgstr "기본주소"
+
+#: views/orders/add.php:145
+msgid "Detail Address"
+msgstr "상세주소"
+
+#: views/orders/add.php:161
+msgid "label_shipping_message"
+msgstr "배송메세지"
+
+#: views/orders/add.php:170
+msgid "Agree Order"
+msgstr "구매동의"
+
+#: views/orders/add.php:192
+msgid "Payment"
+msgstr "결제정보"
+
+#: views/orders/add.php:207 views/products/index.php:41
+msgid "Order Form Submit"
+msgstr "주문하기"
+
+#: views/products/index.php:46
 msgid "Not Exists Product"
 msgstr "제품이 없습니다"
 
@@ -518,67 +567,71 @@ msgstr "답변"
 msgid "no_answer"
 msgstr "미답변"
 
+#: views/reports/view.php:11
+msgid "Total Result"
+msgstr "종합결과"
+
 #: views/users/add.php:8
 msgid "Available Email"
 msgstr "사용가능한 이메일입니다."
 
-#: views/users/add.php:10 views/users/edit.php:21
+#: views/users/add.php:11 views/users/edit.php:22
 msgid "User Data Default Insert"
 msgstr "기본정보 입력"
 
-#: views/users/add.php:18
+#: views/users/add.php:20
 msgid "check_email_available"
 msgstr "이메일 사용가능여부 확인"
 
-#: views/users/add.php:28 views/users/edit.php:36
+#: views/users/add.php:30 views/users/edit.php:38
 msgid "Password Confirm"
 msgstr "비밀번호 확인"
 
-#: views/users/add.php:55 views/users/edit.php:63
+#: views/users/add.php:57 views/users/edit.php:65
 msgid "Male"
 msgstr "남자"
 
-#: views/users/add.php:58 views/users/edit.php:66
+#: views/users/add.php:60 views/users/edit.php:68
 msgid "Female"
 msgstr "여자"
 
-#: views/users/add.php:65 views/users/edit.php:73
+#: views/users/add.php:68 views/users/edit.php:76
 msgid "User Data Optional Insert"
 msgstr "기타정보 입력"
 
-#: views/users/add.php:82
+#: views/users/add.php:87
 msgid "User Agree"
 msgstr "약관동의"
 
-#: views/users/add.php:94 views/users/add.php:101
+#: views/users/add.php:100 views/users/add.php:107
 msgid "See It"
 msgstr "보기"
 
-#: views/users/add.php:108
+#: views/users/add.php:114
 msgid "User Form Submit"
 msgstr "회원가입"
 
-#: views/users/edit.php:32
+#: views/users/edit.php:34
 msgid "User Edit Password"
 msgstr "비밀번호 변경하시려면 입력하세요"
 
-#: views/users/edit.php:38
+#: views/users/edit.php:40
 msgid "User Edit Password Confirm"
 msgstr "비밀번호 변경하시려면 입력하세요"
 
-#: views/users/edit.php:90
+#: views/users/edit.php:94
 msgid "User Form Edit Submit"
 msgstr "내 정보 수정"
 
-#: views/users/index.php:4
+#: views/users/index.php:5
 msgid "Report"
 msgstr "보고서 보기"
 
-#: views/users/index.php:16
+#: views/users/index.php:25
 msgid "Register Code"
 msgstr "제품등록"
 
-#: views/users/index.php:22
+#: views/users/index.php:35
 msgid "Order"
 msgstr "주문"
 
@@ -590,6 +643,9 @@ msgstr "이메일 저장"
 #: views/users/see_agree_service.php:17
 msgid "Confirm"
 msgstr "확인"
+
+#~ msgid "Default Gene is %s,Warning Gene is %s"
+#~ msgstr "%s 관여유전자인 "
 
 #~ msgid "no_data"
 #~ msgstr "해당 게시물이 없습니다."

@@ -95,6 +95,29 @@ aside .box {margin-top:0}
 #find_zip {margin-left:0;padding-left:0}
 
 .order_form {margin-bottom:3%}
+
+#sl_gene_category_view .gene_title {border-top:1px solid #9cf;border-bottom:1px solid #9cf;background:#fff;text-align:center}
+#sl_gene_category_view .gene_title h4 {font-weight:bold;color:#666;padding:0 0 10px;border-bottom:2px dotted #ddd}
+#sl_gene_category_view .gene_title h4,#sl_gene_category_view .gene_title p {font-size:18px;line-height:130%}
+#sl_gene_category_view .gene_title span {display:block}
+#sl_gene_category_view .gene_title h4 span,#sl_gene_category_view .gene_title p span {font-size:80%}
+#sl_gene_category_view .gene_title h4 span {font-weight:normal}
+#sl_gene_category_view .gene_title p {color:#39f;font-weight:bold}
+#sl_gene_category_view .relation {border:1px dotted #ccc;margin:20px 0;padding:5px 10px}
+#sl_gene_category_view .relation h5 {border-bottom:1px solid #ccc;margin:0 0 5px;padding:0 0 5px;text-align:center}
+#sl_gene_category_view .relation ul {list-style:none;margin:0;padding:0}
+#sl_gene_category_view .relation ul li {display:inline}
+#sl_gene_category_view .relation ul li:after {content:','}
+#sl_gene_category_view .relation ul li:last-child:after {content:none}
+#sl_gene_category_view .gene {clear:both;margin-bottom:20px}
+#sl_gene_category_view .gene_description .gene_description_section {background:#fff;border-radius:5px;min-height:100px}
+#sl_gene_category_view .gene_d_bottom {position:absolute;width:100%;left:0;bottom:0;padding:10px;text-align:center;color:#fff;font-weight:bold;background:#9cf;border-bottom-left-radius:5px;border-bottom-right-radius:5px}
+#sl_gene_category_view #tip {float:left;width:100%;background:#ddd;margin-bottom:3%;padding:10px}
+#sl_gene_category_view #tip h4 {border-right:2px solid #9cf;padding-bottom:10px;color:#3cf}
+#sl_gene_category_view #tip h4 span {display:block;color:#333}
+.description_section_left {position:relative;margin-left:0;padding-left:0;margin-right:0;padding-right:0}
+.description_section_left .gene_d_bottom {font-weight:bold;font-size:16px}
+.description_section_right {position:relative;margin-right:0;padding-right:0}
 	
 @media all and (max-width: 768px) {
 	html,body {background:#ccc}

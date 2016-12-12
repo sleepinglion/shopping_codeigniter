@@ -9,8 +9,12 @@ class Reports extends SL_Controller {
 		$this -> load -> model('Order');
 		$orders=$this -> Order -> get_index($this->session->userdata('user_id'));
 		
-		$this -> return_data['data']=$orders;
-		$this -> layout -> render('reports/index', $this -> return_data);
+		if($orders['total']) {		
+			$this -> view($orders['list'][0]['id']);
+		} else {
+			$this -> return_data['data']=$orders;
+			$this -> layout -> render('reports/view', $this -> return_data);
+		}
 	}
 	
 	public function view($id) {
@@ -19,5 +23,5 @@ class Reports extends SL_Controller {
 		
 		$this -> return_data['data']=$reports;
 		$this -> layout -> render('reports/view', $this -> return_data);
-	}	
+	}
 }
