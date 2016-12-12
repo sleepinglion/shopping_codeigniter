@@ -23,8 +23,12 @@ class Gene_categories extends SL_Controller {
 
 		if (!$this -> {$this -> model} -> get_count($id))
 			show_404();
-
-		$this -> return_data['data']['content'] = $this -> {$this -> model} -> get_content($id);
+		
+		$this -> load -> model('Order');
+		$orders=$this -> Order -> get_index($this->session->userdata('user_id'));
+		$order_id=$orders['list'][0]['id'];
+		
+		$this -> return_data['data']['content'] = $this -> {$this -> model} -> get_content($id,$order_id);
 		
 		$this -> load -> model('Gene');
 		$this -> return_data['data']['genes']=$this->Gene->get_index($this -> return_data['data']['content']['id']);
