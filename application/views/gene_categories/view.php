@@ -58,7 +58,7 @@
 			<?php endif ?>
 		</div>
 		<div class="gene_description col-xs-12 col-sm-8 col-md-9">
-			<p style="border-top:1px solid #99ccff;padding:10px 20px;background:#ddd">
+			<p>
 				:: 주의유전형발견시 ::&nbsp;&nbsp;&nbsp;<?php echo $value['description'] ?>
 			</p>
 			<div class="row">

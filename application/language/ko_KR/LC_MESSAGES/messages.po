@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: genomics_shopping\n"
-"POT-Creation-Date: 2016-12-12 15:47+0900\n"
-"PO-Revision-Date: 2016-12-12 15:47+0900\n"
+"POT-Creation-Date: 2016-12-12 16:08+0900\n"
+"PO-Revision-Date: 2016-12-12 16:09+0900\n"
 "Last-Translator: \n"
 "Language-Team: genomics\n"
 "Language: ko\n"
@@ -567,9 +567,13 @@ msgstr "답변"
 msgid "no_answer"
 msgstr "미답변"
 
-#: views/reports/view.php:11
+#: views/reports/view.php:10
 msgid "Total Result"
 msgstr "종합결과"
+
+#: views/reports/view.php:27
+msgid "No Data"
+msgstr "데이터가 없습니다."
 
 #: views/users/add.php:8
 msgid "Available Email"
