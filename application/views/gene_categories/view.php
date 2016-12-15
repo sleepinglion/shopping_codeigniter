@@ -17,6 +17,7 @@
 		</div>		
 	</article>
 	<article class="row">
+		<div class="col-xs-12 col-sm-8">		
 		<h4><?php printf(_('%s related gene analysis is'),$data['content']['title']) ?></h4>
 		<ul>
 			<?php if($data['genes']['total']): ?>
@@ -24,8 +25,9 @@
 			<li><?php echo $value['title'] ?> : </li>
 			<?php endforeach ?>
 			<?php endif ?>
-		</ul>
+		</ul>	
 		<p><?php printf(_('So %s`s %s result is %s'),$this->session->userdata('name'),$data['content']['title'],$data['content']['report_category_sub_title']) ?></p>
+		</div>
 	</article>
 	<p style="text-align:center">* 해당 검사의 결과는 질병의 진단과는 무관하며, 진단 및 치료결정을 위해서는 반드시 의사의 상담이 필요합니다.</p>	
 	<article class="row">
@@ -64,9 +66,9 @@
 			<div class="row">
 			<div class="col-xs-12 col-sm-8">
 				<div class="gene_description_section description_section_left">
-				<p><?php echo printf(_('%s Relation %s Default Gene is %s,Warning Gene is %s'),$value['title'],$value['sub_title'],'TT','A') ?></p>
+				<p><?php printf(_('%s Relation %s Default Gene is %s,Warning Gene is %s'),$value['title'],$value['sub_title'],$value['genotype'],$value['factor']) ?></p>
 				<div class="gene_d_bottom">
-					<?php echo printf(_('%s Your have Gene %s'),$this->session->userdata('name'),'TT') ?>
+					<?php printf(_('%s Your have Gene %s'),$this->session->userdata('name'),'TT') ?>
 				</div>
 				</div>
 			</div>
@@ -74,7 +76,7 @@
 				<div class="gene_description_section description_section_right">
 				<p><?php echo _('Asian Have This Gene ') ?></p>
 				<div class="gene_d_bottom">
-					<?php echo printf(_('%s Asia Gene Percentage %s'),$this->session->userdata('name'),'36%') ?>	
+					<?php printf(_('%s Asia Gene Percentage %s'),$this->session->userdata('name'),'36%') ?>	
 				</div>
 				</div>
 			</div>
