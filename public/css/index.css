@@ -70,14 +70,16 @@ header nav a { float: left; color: #333; font-size:1.3em; text-decoration: none}
 header nav a:hover {color:#000}
 header nav a:visited {color:#666}
 header nav a:active {color:red}
-header nav ul li ul {position:absolute;display:none}	
+header nav ul li ul {position:absolute;display:none}
 header #top_menu {position:absolute;right:10px;top:5px;margin:0;padding:0;list-style:none;z-index:9999}
 header #top_menu li {float:left;margin:0 15px 0 0;padding:0}
 
-/* aside */ 
+/* aside */
 aside {float:right;width:350px;margin:0}
 aside .box {margin-top:0}
 
+footer {position:relative}
+footer form {position:absolute;top:10px;right:10px}
 
 .section_bottom {text-align:center}
 
@@ -97,13 +99,13 @@ aside .box {margin-top:0}
 .order_form {margin-bottom:3%}
 
 
-	
+
 @media all and (max-width: 768px) {
 	html,body {background:#ccc}
 	header {background:none;border-bottom:0;margin:1% 0}
 	header h1 {margin:2%;padding:0;font-size:1.6em}
 	header h1 a {float:left;background:none;text-indent:0;width:100%;font-weight:bold}
-	header h1 a:hover {text-decoration:none}  
+	header h1 a:hover {text-decoration:none}
 	header h1 a:active {color:red}
 	header nav.container {width:100%;margin:0;padding:0}
 	header nav ul {width:100%;margin:2% 0 0;padding:0;background:#fff;border-radius:5px}
@@ -130,7 +132,7 @@ aside .box {margin-top:0}
 
 @media all and (min-width: 768px) and (max-width: 1024px) {
 	header {height:8em;background:#f8f8f8;border-bottom:1px solid #e7e7e7}
-	header nav ul li:first-child {margin-left:0}	
+	header nav ul li:first-child {margin-left:0}
 	footer {height:5em;border-top:1px solid #e7e7e7}
 	#mom {margin:-8em 0 -5em;min-height:100%}
 	#main {padding-top:6em;padding-bottom:5em}
@@ -142,4 +144,3 @@ aside .box {margin-top:0}
 	#mom {margin:-6em 0 -5em;min-height:100%}
 	#main {padding-top:6em;padding-bottom:5em}
 }
-

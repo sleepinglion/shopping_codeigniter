@@ -30,7 +30,6 @@ class Users extends SL_Controller {
 		$this -> form_validation -> set_rules('height', _('Height'), 'numeric|greater_than[20]|less_than[300]');
 		$this -> form_validation -> set_rules('weight', _('Weight'), 'numeric|greater_than[20]|less_than[300]');
 
-		$this -> form_validation -> set_rules('agree[over_age_18]', _('OverAge18 Agreement'), 'required', array('required' => _('Please Agree %s')));
 		$this -> form_validation -> set_rules('agree[service]', _('Service Agreement'), 'required', array('required' => _('Please Agree %s')));
 		$this -> form_validation -> set_rules('agree[information]', _('Personal Information Agreement'), 'required', array('required' => _('Please Agree %s')));
 
@@ -101,7 +100,7 @@ class Users extends SL_Controller {
 	public function see_agree_service() {
 		$this -> load -> view('users/see_agree_service');
 	}
-	
+
 	public function see_agree_information() {
 		$this -> load -> view('users/see_agree_information');
 	}
@@ -158,7 +157,7 @@ class Users extends SL_Controller {
 		$this -> layout -> add_js(base_url() . 'js/sha1.js');
 		$this -> layout -> add_js(base_url() . 'js/validate.min.js');
 		$this -> layout -> add_js(base_url() . 'js/users/login.js');
-		
+
 		$this -> layout -> render('users/login', $this -> return_data);
 	}
 

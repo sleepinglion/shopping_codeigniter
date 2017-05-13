@@ -15,7 +15,7 @@
 			<label class="control-label col-sm-2" for="sl_email"><?php echo _('Email') ?></label>
 			<div class="col-sm-6">
 					<input type="text" class="form-control" id="sl_email" name="email" maxlength="255" value="<?php echo set_value('email'); ?>" />
-			</div>					
+			</div>
 			<div class="col-sm-4">
 					<input type="button" id="check_email_available_button" class="form-control btn btn-success" value="<?php echo _('check_email_available') ?>" />
 			</div>
@@ -52,7 +52,7 @@
 		</div>
 		<div class="radio">
 			<label class="control-label col-sm-2" for="sl_sex"><?php echo _('Sex') ?></label>
-			<div class="col-sm-10<?php if(form_error('sex')){echo ' has-error';} ?>">		
+			<div class="col-sm-10<?php if(form_error('sex')){echo ' has-error';} ?>">
 			<label class="radio-inline">
 				<input type="radio" name="sex" value="1" <?php echo set_radio('sex', 1,true) ?> /> <?php echo _('Male'); ?>
 			</label>
@@ -86,14 +86,7 @@
 		<div class="panel-heading">
 			<h3 class="panel-title"><?php echo _('User Agree') ?></h3>
 		</div>
-		<div class="panel-body">		
-		<div class="col-md-offset-2<?php if(form_error('agree[over_age_18]')){echo ' has-error';} ?>">		
-			<div class="checkbox">
-				<label>
-					<input type="checkbox" name="agree[over_age_18]" value="1" <?php echo set_checkbox('agree[over_age_18]', '1', FALSE); ?> /> <span><?php echo _('OverAge18 Agreement') ?></span>
-				</label>
-			</div>
-		</div>		
+		<div class="panel-body">
 		<div class="col-md-offset-2<?php if(form_error('agree[service]')){echo ' has-error';} ?>">
 			<div class="checkbox">
 				<label>
@@ -108,10 +101,10 @@
 				</label>
 			</div>
 		</div>
-		</div>		
+		</div>
 	</article>
 	<div class="section_bottom">
 		<input type="submit" class="btn btn-primary btn-lg" value="<?php echo _('User Form Submit') ?>" />
 	</div>
-	<?php echo form_close() ?>		
+	<?php echo form_close() ?>
 </section>
