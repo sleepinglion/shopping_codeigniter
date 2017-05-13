@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: genomics_shopping\n"
 "POT-Creation-Date: 2017-05-13 19:52+0900\n"
-"PO-Revision-Date: 2017-05-13 19:52+0900\n"
+"PO-Revision-Date: 2017-05-14 00:41+0900\n"
 "Last-Translator: \n"
 "Language-Team: genomics\n"
 "Language: ko\n"
@@ -87,7 +87,7 @@ msgstr ""
 
 #: controllers/SL.php:65
 msgid "Homepage Title"
-msgstr "제로믹스"
+msgstr "잠자는-사자 쇼핑몰"
 
 #: controllers/SL.php:120 views/users/add.php:4 views/users/add.php:5
 #: views/users/edit.php:18
