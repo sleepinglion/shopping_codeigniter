@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: genomics_shopping\n"
-"POT-Creation-Date: 2017-05-13 19:52+0900\n"
-"PO-Revision-Date: 2017-05-14 00:41+0900\n"
+"POT-Creation-Date: 2017-05-14 01:27+0900\n"
+"PO-Revision-Date: 2017-05-14 01:28+0900\n"
 "Last-Translator: \n"
 "Language-Team: genomics\n"
 "Language: ko\n"
@@ -85,65 +85,65 @@ msgstr ""
 "상기 주문 내역에 대한 모든 정보(서비스명, 가격, 배송정보)를 확인하였으며, 구"
 "매진행에 동의합니다"
 
-#: controllers/SL.php:65
+#: controllers/SL.php:79
 msgid "Homepage Title"
 msgstr "잠자는-사자 쇼핑몰"
 
-#: controllers/SL.php:120 views/users/add.php:4 views/users/add.php:5
+#: controllers/SL.php:134 views/users/add.php:4 views/users/add.php:5
 #: views/users/edit.php:18
 #, php-format
 msgid "The %s field is required."
 msgstr "%s(을)를 입력해주세요."
 
-#: controllers/SL.php:121 views/users/edit.php:19
+#: controllers/SL.php:135 views/users/edit.php:19
 #, php-format
 msgid "The %s field must be at least %s characters in length."
 msgstr "%s(은)는 적어도 %s자 보다는 많아야 합니다."
 
-#: controllers/SL.php:122
+#: controllers/SL.php:136
 #, php-format
 msgid "The %s field cannot exceed %s characters in length."
 msgstr "%s(은)는 많아도 %s자 보다는 적어야 합니다."
 
-#: controllers/SL.php:123
+#: controllers/SL.php:137
 #, php-format
 msgid "The %s field must contain only numbers."
 msgstr "%s(은)는 숫자만 입력되어야 합니다."
 
-#: controllers/SL.php:124 views/users/add.php:7
+#: controllers/SL.php:138 views/users/add.php:7
 #, php-format
 msgid "%s field must contain a unique value."
 msgstr "%s(이)가 이미 존재하는 값입니다."
 
-#: controllers/SL.php:125
+#: controllers/SL.php:139
 #, php-format
 msgid "The %s field does not match the %s field."
 msgstr "%s(이)가 %s(와)과 일치하지 않습니다"
 
-#: controllers/SL.php:126
+#: controllers/SL.php:140
 #, php-format
 msgid "The %s field must contain a number greater than %s."
 msgstr "%s(은)는 %s보다 커야됩니다."
 
-#: controllers/SL.php:127
+#: controllers/SL.php:141
 #, php-format
 msgid "The %s field must contain a number less than %s."
 msgstr "%s(은)는 %s보다 작아야됩니다."
 
-#: controllers/SL.php:128 views/users/add.php:6
+#: controllers/SL.php:142 views/users/add.php:6
 #, php-format
 msgid "The %s field must contain a valid email address."
 msgstr "%s은 유효한 이메일 형식이여야합니다."
 
-#: controllers/SL.php:150 controllers/SL.php:190
+#: controllers/SL.php:164 controllers/SL.php:204
 msgid "title"
 msgstr "제목"
 
-#: controllers/SL.php:180
+#: controllers/SL.php:194
 msgid "Successfully Created Article"
 msgstr "게시물이 등록되었습니다."
 
-#: controllers/SL.php:229
+#: controllers/SL.php:243
 msgid "Successfully Edited Article"
 msgstr "게시물이 수정되었습니다."
 
@@ -264,9 +264,21 @@ msgstr "내용"
 msgid "Title+Content"
 msgstr "제목+내용"
 
-#: views/layout/elements/footer.php:3
+#: views/layout/elements/footer.php:4
 msgid "Footer Address"
 msgstr "주소 : 경기도 수원시 "
+
+#: views/layout/elements/footer.php:7
+msgid "english"
+msgstr "영어"
+
+#: views/layout/elements/footer.php:8
+msgid "korean"
+msgstr "한국어"
+
+#: views/layout/elements/footer.php:10
+msgid "submit"
+msgstr "작성"
 
 #: views/layout/elements/header.php:4
 msgid "Home Title"
@@ -352,7 +364,7 @@ msgstr "이름표"
 #: views/notices/add.php:12 views/notices/edit.php:12
 #: views/questions/add.php:27 views/questions/edit.php:17
 msgid "Submit"
-msgstr "작성"
+msgstr "제출"
 
 #: views/notices/bottom_menu.php:3 views/questions/bottom_menu.php:3
 msgid "index_link"
@@ -707,9 +719,6 @@ msgstr "확인"
 
 #~ msgid "label_description"
 #~ msgstr "소개"
-
-#~ msgid "submit"
-#~ msgstr "작성"
 
 #~ msgid "label_sex"
 #~ msgstr "성별"
