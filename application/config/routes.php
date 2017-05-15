@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------------
@@ -51,7 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller'] = 'home';
 $route['404_override'] = '';
-$route['translate_uri_dashes'] = FALSE;
+$route['translate_uri_dashes'] = false;
 /*
 $route['communities/(:num)'] = 'communities/index/$1';
 $route['communities/comments/add']='community_comments/add';
@@ -64,7 +64,7 @@ $route['communities/comments/comments/delete/(:num)']='community_comment_comment
 */
 $route['admin']='admin/dashboard';
 $route['reports/(:num)'] = 'reports/view/$1';
-$route['productions/(:num)'] = 'productions/view/$1';
+$route['products/(:num)'] = 'products/view/$1';
 $route['gene_categories/(:num)'] = 'gene_categories/view/$1';
 $route['notices/(:num)'] = 'notices/view/$1';
 $route['users/(:num)'] = 'users/view/$1';
@@ -73,5 +73,3 @@ $route['login'] = 'users/login';
 $route['logout'] = 'users/logout';
 $route['users/edit'] = 'users/edit';
 $route['popup'] = 'home/popup';
-
-

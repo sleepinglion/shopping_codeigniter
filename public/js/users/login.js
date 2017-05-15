@@ -1,15 +1,15 @@
 $(document).ready(function() {
 	var cookie=getCookie('user_email');
-	
+
 	$("#sl_login_form").submit(function(){
 		return false;
 	});
-	
+
 	if(cookie) {
 		$("#sl_user_email").val(cookie);
 		$("#remember_email").prop('checked',true);
 	}
-	
+
 	function formValidate(message) {
 		var validator = new FormValidator('sl_login_form', [{
 			name: 'email',
@@ -19,21 +19,21 @@ $(document).ready(function() {
 			name: 'password',
 			display: $("#sl_password").parent().parent().find('label').text(),
 			rules: 'required|trim|min_length[5]|max_length[40]'
-		}], 
-		
+		}],
+
 		function(errors, event) {
 			$("#sl_login_form .has-error").removeClass('has-error');
 			if (errors.length > 0) {
 				$.each(errors,function(index,error){
 					$(error.element).parent().parent().addClass('has-error');
 				});
-				
+
     			var errorString = '';
-    			
+
     			for (var i = 0, errorLength = errors.length; i < errorLength; i++) {
     				errorString += errors[i].message + '<br />';
     			}
-    			
+
     			$('#sl_messages').html('<div class="alert alert-danger" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>'+errorString+'</div>').focus();
     		} else {
     			ajax_login();
@@ -41,27 +41,27 @@ $(document).ready(function() {
 		});
 		validator.setMessage('required',message['required']);
 		validator.setMessage('min_length',message['min_length']);
-		validator.setMessage('max_length',message['max_length']);	
+		validator.setMessage('max_length',message['max_length']);
 		validator.setMessage('valid_email',message['valid_email']);
 	}
-	
+
 	$.getJSON(base_url+'home/get_json_error_message', function(data) {
 		if(data.result=='success') {
 			formValidate(data.message);
 		} else {
-			
+
 		}
 	});
-	
+
 	function ajax_login(){
 		var userEmail=$.trim($("#sl_email").val());
 		var userPassword=$.trim($("#sl_password").val());
 		//var token=$(this).find('input[name="token"]').val();
-		
+
 		if($("#remember_email").is(":checked")) {
 			setCookie('user_email',userEmail);
 		}
-		
+
 		$.post($(this).attr('action'),{'email':userEmail,'password':userPassword,'crypt':true,'json':true},function(data){
 			if(data.result=='success') {
 				if($('input[name="redirect_url"]').length) {
@@ -72,7 +72,7 @@ $(document).ready(function() {
 			} else {
 				display_message(data.message);
 			}
-		},'json'); 
+		},'json');
 		return false;
 	};
 });

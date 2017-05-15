@@ -22,6 +22,7 @@ class Users extends SL_Controller
         $this -> load -> library('form_validation');
         $this -> set_message();
 
+        // require user data
         $this -> form_validation -> set_rules('email', _('Email'), 'required|is_unique[users.email]|trim|valid_email');
         $this -> form_validation -> set_rules('password', _('Password'), 'required|trim|min_length[5]|max_length[40]|matches[password_confirm]');
         $this -> form_validation -> set_rules('password_confirm', _('Password Confirmation'), 'required|trim|min_length[5]|max_length[40]|matches[password]');
@@ -30,9 +31,11 @@ class Users extends SL_Controller
         $this -> form_validation -> set_rules('birthday', _('Birthday'), 'required|trim|check_date', array('check_date' => _('%s Must Validate Date ex) Y-m-d')));
         $this -> form_validation -> set_rules('sex', _('Sex'), 'required|trim');
 
+        // optional user data
         $this -> form_validation -> set_rules('height', _('Height'), 'numeric|greater_than[20]|less_than[300]');
         $this -> form_validation -> set_rules('weight', _('Weight'), 'numeric|greater_than[20]|less_than[300]');
 
+        // user agreement
         $this -> form_validation -> set_rules('agree[service]', _('Service Agreement'), 'required', array('required' => _('Please Agree %s')));
         $this -> form_validation -> set_rules('agree[information]', _('Personal Information Agreement'), 'required', array('required' => _('Please Agree %s')));
 

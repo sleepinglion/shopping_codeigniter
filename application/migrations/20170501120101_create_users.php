@@ -24,7 +24,7 @@ class Migration_Create_users extends CI_Migration
           ),
           'encrypted_password' => array(
             'type' => 'VARCHAR',
-            'constraint' => '40',
+            'constraint' => '60',
             'null' => false
           ),
           'phone' => array(
