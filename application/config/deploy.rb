@@ -1,11 +1,11 @@
-set :application, 'shopping_admin'
+set :application, 'shopping'
 set :repo_url, 'git@github.com:sleepinglion/shopping_codeigniter.git'
 set :branch, 'master'
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, '/BiO/Serve/Httpd/Gene/shopping'
+set :deploy_to, '/home/deploy/shopping_codeigniter'
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
