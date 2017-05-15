@@ -49,8 +49,8 @@ class SL_Controller extends CI_Controller
 
 
         /* i18n locale */
-        #$locale = 'ko_KR.UTF-8';
-        $locale = 'en_US.UTF-8';
+        #$language = 'korean';
+        $language = 'english';
 
         if ($this -> input -> get('locale')) {
             $language=$this -> input -> get('locale');
