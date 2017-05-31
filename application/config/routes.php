@@ -69,6 +69,21 @@ $route['gene_categories/(:num)'] = 'gene_categories/view/$1';
 $route['notices/(:num)'] = 'notices/view/$1';
 $route['users/(:num)'] = 'users/view/$1';
 
+//brands routes
+$route['admin/brands'] = 'admin/brands';
+$route['admin/brands/create'] = 'admin/brands/create';
+$route['admin/brands/edit/(:any)'] = 'admin/brands/edit/$1';
+
+//categories routes
+$route['admin/categories'] = 'admin/categories';
+$route['admin/categories/create'] = 'admin/categories/create';
+$route['admin/categories/edit/(:any)'] = 'admin/categories/edit/$1';
+
+//products routes
+$route['admin/products'] = 'admin/products';
+$route['admin/products/create'] = 'admin/products/create';
+$route['admin/products/edit/(:any)'] = 'admin/products/edit/$1';
+
 $route['login'] = 'users/login';
 $route['logout'] = 'users/logout';
 $route['users/edit'] = 'users/edit';

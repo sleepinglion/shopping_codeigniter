@@ -52,12 +52,12 @@ class SL_Controller extends CI_Controller
         #$language = 'korean';
         $language = 'english';
 
-        if ($this -> input -> get('locale')) {
-            $language=$this -> input -> get('locale');
-            $this->session->set_userdata('locale', $language);
+        if ($this -> input -> get('language')) {
+            $language=$this -> input -> get('language');
+            $this->session->set_userdata('language', $language);
         } else {
-            if ($this->session->userdata('locale')) {
-                $language=$this->session->userdata('locale');
+            if ($this->session->userdata('language')) {
+                $language=$this->session->userdata('language');
             }
         }
 
