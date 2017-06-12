@@ -47,7 +47,6 @@ class SL_Controller extends CI_Controller
         $this -> layout -> add_js(base_url().'js/plugin/jquery.tagcanvas.min.js');
         $this -> layout -> add_js(base_url().'js/common.js');
 
-
         /* i18n locale */
         #$language = 'korean';
         $language = 'english';

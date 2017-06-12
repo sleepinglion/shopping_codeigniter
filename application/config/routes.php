@@ -51,7 +51,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 */
 $route['default_controller'] = 'home';
 $route['404_override'] = '';
-$route['translate_uri_dashes'] = false;
+$route['translate_uri_dashes'] = true;
 /*
 $route['communities/(:num)'] = 'communities/index/$1';
 $route['communities/comments/add']='community_comments/add';
@@ -62,7 +62,7 @@ $route['communities/comments/comments/add']='community_comment_comments/add';
 $route['communities/comments/comments/confirm_delete/(:num)']='community_comment_comments/confirm_delete/$1';
 $route['communities/comments/comments/delete/(:num)']='community_comment_comments/delete/$1';
 */
-$route['admin']='admin/dashboard';
+$route['admin']='/admin/admin_home';
 $route['reports/(:num)'] = 'reports/view/$1';
 $route['products/(:num)'] = 'products/view/$1';
 $route['gene_categories/(:num)'] = 'gene_categories/view/$1';
