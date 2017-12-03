@@ -14,22 +14,6 @@ class SL_Controller extends CI_Controller
     protected $comment = true;
     protected $show_first_category=false;
 
-    /**
-     * Index Page for this controller.
-     *
-     * Maps to the following URL
-     * 		http://example.com/index.php/welcome
-     *	- or -
-     * 		http://example.com/index.php/welcome/index
-     *	- or -
-     * Since this controller is set as the default controller in
-     * config/routes.php, it's displayed at http://example.com/
-     *
-     * So any other public methods not prefixed with an underscore will
-     * map to /index.php/welcome/<method_name>
-     * @see http://codeigniter.com/user_guide/general/urls.html
-     */
-
     public function __construct()
     {
         parent::__construct();
@@ -328,6 +312,33 @@ class SL_Controller extends CI_Controller
             redirect($this -> router -> fetch_class());
         } else {
             throw new Exception("Error Processing Request", 1);
+        }
+    }
+
+    protected function getImpressionCount($id)
+    {
+        $this -> load-> model('Impression');
+        return $this -> Impression -> get_count_impression(array('impressionable_type' => $this -> model,'controller_name' => $this ->router->fetch_class(), 'action_name' => $this ->router->fetch_method(), 'ip_address' => $this -> input-> ip_address(),'impressionable_id' => $id));
+    }
+
+    protected function addImpression($id)
+    {
+        if ($this -> getImpressionCount($id)) {
+            return false;
+        } else {
+            $this -> load -> model('Impression');
+            if (!$this -> Impression -> insert(
+            array('impressionable_type' => $this -> model,
+            'controller_name' => $this ->router->fetch_class(),
+            'action_name' => $this ->router->fetch_method(),
+            'ip_address' => $this -> input-> ip_address(),
+            'request_hash'=>hash_hmac("sha512", time().rand(0, 10000), 'sleepinglion'),
+            'session_hash'=>session_id(),
+            'impressionable_id' => $id, 'referrer' => $_SERVER['HTTP_REFERER'])
+            )) {
+                $this -> session -> set_flashdata('message', array('type' => 'error', 'message' => _('The post could not be saved. Please, try again.')));
+            }
+            return true;
         }
     }
 
