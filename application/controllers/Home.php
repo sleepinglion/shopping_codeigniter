@@ -6,15 +6,11 @@ class Home extends SL_Controller
 {
     protected $model = 'Home';
     protected $ad = false;
+    protected $script='index.js';
 
     public function index($page = 0)
     {
-        $this -> layout -> add_js(base_url() . 'js/index.js');
-
-        //if (ENVIRONMENT == 'production')
-        //	$this -> output -> cache(1200);
-
-        $this -> layout -> render('home/index', $this -> return_data);
+        $this->render_format();
     }
 
     public function get_json_error_message()

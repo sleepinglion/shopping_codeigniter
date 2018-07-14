@@ -1,9 +1,10 @@
 <?php
 
-if (!defined('BASEPATH'))
+if (!defined('BASEPATH')) {
     exit('No direct script access allowed');
+}
 /*
- * config file for layout. 
+ * config file for layout.
  * @location ./application/config/layout.php
  */
 
@@ -14,7 +15,13 @@ if (!defined('BASEPATH'))
  * this will be added before javascript filenames
  * $config['js_file_path'] = '/js';
  */
-$config['js_file_path'] = '';
+ if (ENVIRONMENT=='production') {
+     //  $config['js_file_path'] = 'yourcdn::/myfiterp/assets/javascripts/';
+     $config['js_file_path'] = base_url().'assets/javascripts/';
+ } else {
+     $config['js_file_path'] = base_url().'assets/javascripts/';
+ }
+
 
 
 
@@ -23,7 +30,12 @@ $config['js_file_path'] = '';
  * this will be added before css filenames
  * $config['css_file_path'] = '/css';
  */
-$config['css_file_path'] = '';
+ if (ENVIRONMENT=='production') {
+     //  $config['css_file_path'] = 'yourcdn::/myfiterp/assets/stylesheets/';
+     $config['css_file_path'] = base_url().'assets/javascripts/';
+ } else {
+     $config['css_file_path'] = base_url().'assets/stylesheets/';
+ }
 
 
 
@@ -42,13 +54,13 @@ $config['element_folder'] = 'elements';
 
 
 /*
- * default layout configaration. 
- * 
+ * default layout configaration.
+ *
  * 'meta'                   = meta for layout. See html helper meta() for details
  * 'title_for_layout'   = If auto_title set to false this will use as title
- * 'title_separator'    = for auto_tile 
+ * 'title_separator'    = for auto_tile
  * 'layout'                 = name of the default layout
- * 
+ *
  */
 $config['default'] = array(
     'meta' => array(

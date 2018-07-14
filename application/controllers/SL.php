@@ -13,65 +13,106 @@ class SL_Controller extends CI_Controller
     protected $return_data;
     protected $comment = true;
     protected $show_first_category=false;
+    protected $format='html';
+
+    protected $script=false;
+
+    // assets version
+    protected $assets_version=1;
 
     public function __construct()
     {
         parent::__construct();
 
-        $this -> load -> helper('sl');
-        $this -> load -> helper('url');
-        $this -> load -> helper('form');
-        $this -> load -> helper('inflector');
+        $this->load_default_helper();
+
         $this -> load -> library('session');
-        $this -> load -> library('layout', array('title_for_layout' => 'default'));
-        $this -> layout -> add_css(base_url().'css/bootstrap.min.css');
-        $this -> layout -> add_css(base_url().'css/index.css');
-        $this -> layout -> add_js(base_url().'js/jquery-2.1.1.min.js');
-        $this -> layout -> add_js(base_url().'js/bootstrap.min.js');
-        $this -> layout -> add_js(base_url().'js/plugin/jquery.tagcanvas.min.js');
-        $this -> layout -> add_js(base_url().'js/common.js');
+        $this -> load -> library('layout');
 
-        /* i18n locale */
-        #$language = 'korean';
-        $language = 'english';
-
-        if ($this -> input -> get('language')) {
-            $language=$this -> input -> get('language');
-            $this->session->set_userdata('language', $language);
-        } else {
-            if ($this->session->userdata('language')) {
-                $language=$this->session->userdata('language');
-            }
-        }
-
-        switch ($language) {
-                    case 'korean':
-                        $locale= 'ko_KR.UTF-8';
-                        break;
-                    default:
-                        $locale = 'en_US.UTF-8';
-                }
-
-        if (!function_exists('_')) {
-            echo 'gettext function not exists';
-        }
-
-        putenv("LC_ALL=" . $locale);
-        setlocale(LC_ALL, $locale);
-        bindtextdomain('messages', APPPATH . DIRECTORY_SEPARATOR . 'language');
-        textdomain('messages');
-        bind_textdomain_codeset('messages', 'UTF-8');
+        $this->set_locale();
 
         $common_data['meta_title']=$this->config->item('seo_title');
         $common_data['meta_description']=$this->config->item('seo_desc');
         $common_data['model'] = ucfirst($this -> model);
 
-        $this -> layout -> title_for_layout = _('Homepage Title');
+        if ($this->format=='html') {
+            $this ->render_default_resource();
+            $this -> layout -> title_for_layout = _('Homepage Title');
+        }
 
         $common_data['title'] = _($common_data['model']);
-
-
         $this -> return_data = array('common_data' => $common_data);
+    }
+
+    protected function load_default_helper()
+    {
+        $this -> load -> helper('sl');
+        $this -> load -> helper('url');
+        $this -> load -> helper('form');
+        $this -> load -> helper('inflector');
+    }
+
+    protected function set_locale()
+    {
+        if (!function_exists('_')) {
+            echo 'gettext function not exists';
+        }
+
+        /* i18n locale */
+        $language = 'korean';
+        //$language = 'english';
+
+        if ($this -> input -> get('language')) {
+            $language=$this -> input -> get('language');
+            $this->session->set_userdata('language', $language);
+        }
+
+        if ($this->session->userdata('language')) {
+            $language=$this->session->userdata('language');
+        }
+
+        switch ($language) {
+        case 'korean':
+          $locale= 'ko_KR.UTF-8';
+          break;
+        default:
+          $locale = 'en_US.UTF-8';
+      }
+
+        putenv("LC_ALL=" . $locale);
+        setlocale(LC_ALL, $locale);
+        if ($this->session->userdata('is_apt')) {
+            $messages='messages_apt';
+        } else {
+            $messages='messages';
+        }
+        bindtextdomain($messages, APPPATH . DIRECTORY_SEPARATOR . 'language');
+        textdomain($messages);
+        bind_textdomain_codeset($messages, 'UTF-8');
+    }
+
+    protected function render_default_resource()
+    {
+        //if (ENVIRONMENT=='development') {
+            $this -> layout -> add_css('bootstrap.min.css');
+        $this -> layout -> add_css('bootstrap-datepicker3.min.css');
+        $this -> layout -> add_css('index.css');
+        //} else {
+            // uglifycss --output common.min.css  bootstrap.min.css select2.min.css animate.min.css bootstrap-datepicker.css style.css theme/default.css jquery.fancybox-1.3.4.css font-awesome.min.css index.css
+        //    $this -> layout -> add_css('common.min.css?version='.$this->assets_version);
+        //}
+
+        //if (ENVIRONMENT=='development') {
+            $this -> layout -> add_js('jquery-2.1.1.min.js');
+        $this -> layout -> add_js('bootstrap.min.js');
+        $this -> layout -> add_js('bootstrap-datepicker.min.js');
+        $this -> layout -> add_js('validate.min.js');
+        $this -> layout -> add_js('plugin/jquery.tagcanvas.min.js');
+        $this -> layout -> add_js('common.js');
+      //  } else {
+            // uglifyjs --output common.min.js   jquery-2.1.1.min.js bootstrap.min.js bootstrap-datepicker.min.js validate.min.js  jquery.form.min.js jquery.fancybox.1.3.4.js  select2.min.js jquery.pagination.js bootstrap-datepicker.min.js common.js
+        //    $this -> layout -> add_js('common.min.js?version='.$this->assets_version);
+        //}
     }
 
     public function index()
@@ -122,7 +163,43 @@ class SL_Controller extends CI_Controller
 
         //$this -> output -> cache(1200);
         $this -> setting_pagination($config);
-        $this -> layout -> render($this -> router -> fetch_class() . '/index', $this -> return_data);
+        $this->render_format();
+    }
+
+    protected function render_format(array $json_array=null, $format='html')
+    {
+        if ($this->input->get('format')=='json' or $this->input->get('json')=='true') {
+            $format='json';
+        }
+
+        if (empty($json_array)) {
+            $json_array=$this->json_format();
+        }
+
+        if ($format=='json') {
+            echo json_encode($json_array);
+        } else {
+            $this->render_index_resource();
+            $this -> layout -> render($this -> router -> fetch_class() . '/'.$this -> router -> fetch_method(), $this -> return_data);
+        }
+    }
+
+    protected function json_format()
+    {
+        if (isset($this -> return_data['data']['total'])) {
+            if ($this -> return_data['data']['total']) {
+                return array('result'=>'success','total'=>$this -> return_data['data']['total'],'list'=>$this -> return_data['data']['list']);
+            } else {
+                return array('result'=>'success','total'=>$this -> return_data['data']['total']);
+            }
+        }
+    }
+
+    protected function render_index_resource()
+    {
+        if ($this->script) {
+            $this -> layout -> add_js($this->script.'?version='.$this->assets_version);
+        }
     }
 
     protected function get_error_messages()
@@ -177,8 +254,8 @@ class SL_Controller extends CI_Controller
 
         if ($this -> form_validation -> run() == false) {
             if ($this->session->userdata('user_id')) {
-                $this -> layout -> add_js('/ckeditor/ckeditor.js');
-                $this -> layout -> add_js('/js/boards/add.js');
+                $this -> layout -> add_js('ckeditor/ckeditor.js');
+                $this -> layout -> add_js('boards/add.js');
             }
             $this -> layout -> render($this -> router -> fetch_class() . '/add', $this -> return_data);
         } else {
@@ -226,8 +303,8 @@ class SL_Controller extends CI_Controller
             $this -> return_data['data']['content']=$data['content'];
 
             if ($this->session->userdata('user_id')) {
-                $this -> layout -> add_js('/ckeditor/ckeditor.js');
-                $this -> layout -> add_js('/js/boards/add.js');
+                $this -> layout -> add_js('ckeditor/ckeditor.js');
+                $this -> layout -> add_js('boards/add.js');
             }
             $this -> layout -> render($this -> router -> fetch_class() . '/edit', $this -> return_data);
         } else {
@@ -281,7 +358,7 @@ class SL_Controller extends CI_Controller
         }
 
         // $this -> output -> cache(1200);
-        $this -> layout -> add_js(base_url().'js/boards/view.js');
+        $this -> layout -> add_js('boards/view.js');
         $this -> layout -> render($this -> router -> fetch_class() . '/view', $this -> return_data);
     }
 

@@ -42,10 +42,7 @@ class Users extends SL_Controller
         $this -> return_data['common_data']['title'] = _('User Add');
 
         if ($this -> form_validation -> run() == false) {
-            $this -> layout -> add_css(base_url() . 'css/bootstrap-datepicker3.min.css');
-            $this -> layout -> add_js(base_url() . 'js/validate.min.js');
-            $this -> layout -> add_js(base_url() . 'js/bootstrap-datepicker.min.js');
-            $this -> layout -> add_js(base_url() . 'js/users/add.js');
+            $this -> layout -> add_js('users/add.js');
             $this -> layout -> render('users/add', $this -> return_data);
         } else {
             $data = $this -> input -> post(null, true);
@@ -83,10 +80,6 @@ class Users extends SL_Controller
         $this -> return_data['data']['content'] = $this -> User -> get_content($this -> session -> userdata('user_id'));
 
         if ($this -> form_validation -> run() == false) {
-            $this -> layout -> add_css(base_url() . 'css/bootstrap-datepicker3.min.css');
-            $this -> layout -> add_js(base_url() . 'js/validate.min.js');
-            $this -> layout -> add_js(base_url() . 'js/bootstrap-datepicker.min.js');
-            $this -> layout -> add_js(base_url() . 'js/users/edit.js');
             $this -> layout -> render('users/edit', $this -> return_data);
         } else {
             $data = $this -> input -> post(null, true);
@@ -163,12 +156,12 @@ class Users extends SL_Controller
         }
 
         $this -> return_data['common_data']['title'] = _('Login');
-        $this -> layout -> add_js(base_url() . 'js/jquery-2.1.1.min.js');
-        $this -> layout -> add_js(base_url() . 'js/sha1.js');
-        $this -> layout -> add_js(base_url() . 'js/validate.min.js');
-        $this -> layout -> add_js(base_url() . 'js/users/login.js');
+        $this -> layout -> add_js('jquery-2.1.1.min.js');
+        $this -> layout -> add_js('sha1.js');
+        $this -> layout -> add_js('validate.min.js');
+        $this -> layout -> add_js('users/login.js');
 
-        $this -> layout -> render('users/login', $this -> return_data);
+        $this->render_format();
     }
 
     public function logout()
