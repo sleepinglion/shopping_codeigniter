@@ -1,0 +1,32 @@
+@CHARSET "UTF-8";
+
+/* tag */
+body,html {margin:0;padding:0;height: 100%}
+body { font-family:"굴림",gulim,"돋움",Dotum,Arial, Helvetica, sans-serif;color:#333; font-size:12px}
+label {vertical-align:middle;cursor:pointer}
+input {vertical-align:middle}
+a img {border:none}
+a {color:#666;text-decoration:none;}
+a:active {color:red}
+a:hover {color:#333;text-decoration:underline;}
+a img {border:none}
+table {margin:0;padding:0;width:100%;border-collapse:collapse;}
+table th {text-align:center;font-weight:bold}
+caption,legend {text-indent:-5000px; overflow:hidden;height:1px;font-size:0;line-height:0}
+fieldset {width:100%;border:none}
+form {position:relative;margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6 {font-size:12px;font-weight:bold}
+
+/* Common Class */
+.apple_overlay {position:relative;display:none;width:400px;padding:35px;font-size:12px;}
+.arial {font-family:Arial;}
+.noneData {text-align:center}
+.clear{clear:both}
+.none{display:none;height:1px;line-height:1px;}
+.number {font-family:Arial;letter-spacing:0}
+.none{display:none;}
+
+/* Getting the new tags to behave */
+article, aside, audio, canvas, command, datalist, details, embed, figcaption, figure, footer, header, hgroup, keygen, meter, nav, output, progress, section, source, video {display:block;}
+mark, rp, rt, ruby, summary, time {display:inline;}
+

@@ -1,0 +1,5 @@
+
+#slboard_login_form {}
+#slboard_login_form .field {padding:10px 0}
+#slboard_login_form .sl_input {	border:1px solid #ccc;border-top-color:#999;border-left-color:#999;padding:4px 2px;font-size:12px}
+#slboard_login_form .sl_input:focus { background-color:#ffffdd}

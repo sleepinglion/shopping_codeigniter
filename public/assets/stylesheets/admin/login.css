@@ -1,0 +1,18 @@
+@CHARSET "UTF-8";
+
+html,body {margin:0;padding:0}
+figure {margin:0;padding:0}
+figcaption {display:block;text-indent:-9999px;}
+body {color: #333;font-size:12px;font-family:"굴림",gulim,"돋움",Dotum,Arial, Helvetica, sans-serif;color:#333;background: url("/images/admin/bg_silver.jpg") repeat fixed 0 0 #EEEEEE;}
+img {vertical-align:middle;margin-right:10px}
+#admin_login {display: block;margin: 8% auto;padding:10px 0;width: 340px;}
+#admin_login form {position: relative;border: 1px solid white;display: block;margin:10px 0 0;padding:10px 0;width: 340px;background: url("/images/admin/grey_noise.png") repeat scroll 0 0 #E5E8EA;}
+form fieldset {border:none}
+form legend {display:none}
+form .field {margin:0;padding:5px 0}
+.sl_input {	border:1px solid #ccc;border-top-color:#999;border-left-color:#999;padding:4px 2px;font-size:12px;width:170px;font-family:Arial}
+.sl_input:focus { background-color:#ffffdd}
+form #bar {float:left;width:100%;background-color: #4C5766;color:#fff;margin:10px 0 0;padding: 10px 0px}
+form #bar p {float:left;margin:0 0 0 20px;padding:0;display:inline;}
+.form_in {float:left;margin:0 0 0 20px}
+.field.submit_form {float:right;margin:30px 20px 0 0}

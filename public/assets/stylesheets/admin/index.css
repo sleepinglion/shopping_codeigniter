@@ -1,0 +1,131 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+html,body {margin:0;padding:0;height: 100%;background:#ccc}
+body { font-family: "Nanum Gothic","나눔고딕","Malgun Gothic","맑은 고딕","굴림",gulim,"돋움",Dotum,Arial,Helvetica, sans-serif;color:#333}
+label {vertical-align:middle;cursor:pointer}
+a img {border:none}
+input {vertical-align:middle}
+fieldset {border:none}
+legend {display:none}
+a{color:#666;text-decoration:none;}
+a:active {color:red}
+a:hover{color:#333;text-decoration:underline;}
+a img {border:none}
+
+h1 {font-size :150%}
+h2 {font-size :140%}
+h3 {font-size :120%}
+h4,h5,h6 {font-size : 100%}
+
+/* Getting the new tags to behave */
+article, aside, audio, canvas, command, datalist, details, embed, figcaption, figure, footer, header, hgroup, keygen, meter, nav, output, progress, section, source, video {display:block;}
+mark, rp, rt, ruby, summary, time {display:inline;}
+
+/* layout */
+footer {clear:both;float:left;width:80%;margin:0 10%;color:#666;text-align: center}
+footer div {margin:0.3em 0 0}
+.sub_main {float:left;width:728px;padding:0 0 30px}
+.page-header {float:left;width:100%}
+.page-header h1 {float:left;margin:0.3em 0 0;padding:0;font-weight:bold;color:#666}
+.page-header .breadcrumb  {float:right;margin:0}
+.alert-success {clear:both}
+#sl_ad {clear:both;margin-bottom:10px}
+#sl_tag_cloud {position:relative;float:left;width:100%;margin-bottom:30px;border:1px solid #ccc}
+#tags {float:left;width:100%}
+.css1 { font-size: 15px; color:orange}
+.css2 { font-size: 20px; color:#333}
+.css3 { font-size: 30px; color:blue}
+.css4 { font-size: 45px; color:red;}
+
+/* Common Class */
+.arial {font-family:Arial}
+.noneData {text-align:center}
+.clear{clear:both}
+.none{display:none}
+.number {font-family:Arial;letter-spacing:0}
+.clear{clear:both}
+.none{display:none}
+.wrapper {margin:0 auto;width:728px}
+.ad_test {background:red}
+.jumbotron {margin:30px 0}
+.sl_categories span.hidden-xs {display:inline!important}
+.c_pointer {cursor:pointer}
+
+/* header */
+header {position:fixed;top:0;width:100%;}
+header h1 {float:left;margin:5px 10px;padding:0}
+header h1 a:active {color:red}
+header nav { position: relative; z-index: 999; margin:0; padding:0}
+header nav ul { float: right; margin:0; padding: 0}
+header nav li { float: left; list-style: none; margin: 0 0 0 20px}
+header nav ul.nav-pills > li + li {margin-left:20px}
+header nav a { float: left; color: #333; font-size:1.3em; text-decoration: none}
+header nav a:hover {color:#000}
+header nav a:visited {color:#666}
+header nav a:active {color:red}
+header nav ul li ul {position:absolute;display:none}	
+
+/* aside */ 
+aside {position:absolute;top:0;left:0;float:left;width:200px;margin:0}
+
+
+
+
+
+/* footer */
+footer address {margin-top:10px }
+
+
+
+
+@media all and (max-width: 768px) {
+	html,body {background:#ccc}
+	header {background:none;border-bottom:0;margin:1% 0}
+	header h1 {margin:2%;padding:0;font-size:1.6em}
+	header h1 a {float:left;background:none;text-indent:0;width:100%;font-weight:bold}
+	header h1 a:hover {text-decoration:none}  
+	header h1 a:active {color:red}
+	header nav.container {width:100%;margin:0;padding:0}
+	header nav ul {width:100%;margin:2% 0 0;padding:0;background:#fff;border-radius:5px}
+	header nav ul li,header ul li a {clear:both;float:left;width:100%;text-align:left}
+	header nav ul.nav-pills > li + li {margin-left:0}
+	header nav ul li {margin:0;padding:0}
+	header nav ul li a {display:block;border-bottom:1px solid #f3f3f3;text-indent:1em;padding:10px;border-radius:5px}
+	header nav ul li a:hover {text-decoration:none;background:#eee}
+	header nav ul li a:active {color:red}
+	header nav ul li a .glyphicon {margin-right:1em}
+	.nav-pills > li + li {margin:0}
+	#mom {float:left;clear:both;width:100%;margin:0}
+	#main {float:left;margin:0;padding:0;width:100%;padding:3%;border-radius:5px;background:#fff;}
+	.sub_main {clear:both;width:100%}
+	#sl_main_blog li {margin-bottom:10px}
+	#main_main article ul {margin:0;padding:0;list-style:none}
+	#sl_intro_index #sl_intro_right {float:left;width:100%}  
+	header nav ul a:hover {color:#000}
+	header nav ul a:active {color:red}
+	.page-header {float:left;margin:0 0 10px}
+	#sl_intro_index #sl_intro_right, #sl_gallery_index #sl_gallery_right {width:100%;margin:0}
+	#sl_intro_index #sl_intro_left {width:100%}
+	footer {background:#fff;border-radius:5px;width:100%;margin:1% 0}
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+	header {height:8em;background:#f8f8f8;border-bottom:1px solid #e7e7e7}
+	header nav ul li:first-child {margin-left:0}	
+	#sl_intro_index #sl_intro_right dd {width:200px}
+	footer {height:5em;border-top:1px solid #e7e7e7}
+	#mom {margin:-8em 0 -5em;min-height:100%}
+	#main {padding-top:6em;padding-bottom:5em}
+}
+
+@media all and (min-width: 1025px) {
+	header {height:2.5em;background:#f8f8f8;border-bottom:1px solid #e7e7e7}
+	header nav {width:80%}
+	footer {height:2em;border-top:1px solid #e7e7e7}
+	aside {margin-top:2.5em}
+	#mom {margin:-2.5em 0 -2em;min-height:100%;background:#fff;margin-left:200px}
+	#main {padding-top:2.5em;padding-bottom:2em}
+	.ad_test {height:90px}
+	
+}
+
