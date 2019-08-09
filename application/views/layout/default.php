@@ -22,12 +22,12 @@
 	<div id="mom">
 		<main id="main" class="container">
 		<?php if ($this -> router -> fetch_class()=='home'): ?>
-		<div id="main_main">
+		<div id="main_main" class="row">
 			<?php echo $contents_for_layout ?>
 		</div>
 		<?php else: ?>
 		<?php echo $Layout->element('page_header') ?>
-		<div class="sub_main">
+		<div class="sub_main" class="row">
 			<?php echo $contents_for_layout ?>
 		</div>
 		<?php endif ?>

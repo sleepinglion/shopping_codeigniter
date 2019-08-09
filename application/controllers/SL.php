@@ -93,26 +93,26 @@ class SL_Controller extends CI_Controller
 
     protected function render_default_resource()
     {
-        //if (ENVIRONMENT=='development') {
+        if (ENVIRONMENT=='development') {
             $this -> layout -> add_css('bootstrap.min.css');
-        $this -> layout -> add_css('bootstrap-datepicker3.min.css');
-        $this -> layout -> add_css('index.css');
-        //} else {
+            $this -> layout -> add_css('bootstrap-datepicker3.min.css');
+            $this -> layout -> add_css('index.css');
+        } else {
             // uglifycss --output common.min.css  bootstrap.min.css select2.min.css animate.min.css bootstrap-datepicker.css style.css theme/default.css jquery.fancybox-1.3.4.css font-awesome.min.css index.css
-        //    $this -> layout -> add_css('common.min.css?version='.$this->assets_version);
-        //}
+            $this -> layout -> add_css('common.min.css?version='.$this->assets_version);
+        }
 
-        //if (ENVIRONMENT=='development') {
+        if (ENVIRONMENT=='development') {
             $this -> layout -> add_js('jquery-2.1.1.min.js');
-        $this -> layout -> add_js('bootstrap.min.js');
-        $this -> layout -> add_js('bootstrap-datepicker.min.js');
-        $this -> layout -> add_js('validate.min.js');
-        $this -> layout -> add_js('plugin/jquery.tagcanvas.min.js');
-        $this -> layout -> add_js('common.js');
-      //  } else {
+            $this -> layout -> add_js('bootstrap.min.js');
+            $this -> layout -> add_js('bootstrap-datepicker.min.js');
+            $this -> layout -> add_js('validate.min.js');
+            $this -> layout -> add_js('plugin/jquery.tagcanvas.min.js');
+            $this -> layout -> add_js('common.js');
+        } else {
             // uglifyjs --output common.min.js   jquery-2.1.1.min.js bootstrap.min.js bootstrap-datepicker.min.js validate.min.js  jquery.form.min.js jquery.fancybox.1.3.4.js  select2.min.js jquery.pagination.js bootstrap-datepicker.min.js common.js
-        //    $this -> layout -> add_js('common.min.js?version='.$this->assets_version);
-        //}
+            $this -> layout -> add_js('common.min.js?version='.$this->assets_version);
+        }
     }
 
     public function index()
@@ -419,16 +419,26 @@ class SL_Controller extends CI_Controller
         }
     }
 
-    public function setting_pagination(array $config)
+    protected function setting_pagination(array $config)
     {
         $this -> load -> library('pagination');
 
-        $config['base_url'] = base_url() . $this -> router -> fetch_class();
+        if (empty($config['per_page'])) {
+            $config['per_page']=$this->per_page;
+        }
+
+        if (empty($config['base_url'])) {
+            if ($this->router->fetch_method()=='index' or $this->router->fetch_method()=='edit') {
+                $config['base_url'] = base_url() . $this -> router -> fetch_class();
+            } else {
+                $config['base_url'] = base_url().  $this -> router -> fetch_class().'/'.$this->router->fetch_method();
+            }
+        }
         $config['page_query_string'] = true;
         $config['use_page_numbers'] = true;
         $config['query_string_segment'] = 'page';
 
-        $query_string = $_GET;
+        $query_string = $this->input->get();
         if (isset($query_string['page'])) {
             unset($query_string['page']);
         }
@@ -438,6 +448,32 @@ class SL_Controller extends CI_Controller
             $config['first_url'] = $config['base_url'] . '?' . http_build_query($query_string, '', "&");
         }
 
+        $config['full_tag_open'] = '<ul class="pagination justify-content-center">';
+        $config['full_tag_close'] = '</ul>';
+
+        $config['first_link'] = '&laquo; '._('First');
+        $config['first_tag_open'] = '<li class="prev page-item">';
+        $config['first_tag_close'] = '</li>';
+
+        $config['last_link'] = _('Last').' &raquo;';
+        $config['last_tag_open'] = '<li class="next page-item">';
+        $config['last_tag_close'] = '</li>';
+
+        $config['next_link'] = '▶';
+        $config['next_tag_open'] = '<li class="next page-item">';
+        $config['next_tag_close'] = '</li>';
+
+        $config['prev_link'] = '◀';
+        $config['prev_tag_open'] = '<li class="prev page-item">';
+        $config['prev_tag_close'] = '</li>';
+
+        $config['cur_tag_open'] = '<li class="active page-item"><a href="" class="page-link">';
+        $config['cur_tag_close'] = '</a></li>';
+
+        $config['num_tag_open'] = '<li class="page-item">';
+        $config['num_tag_close'] = '</li>';
+
+        $config['attributes'] = array('class' => 'page-link');
         $this -> pagination -> initialize($config);
     }
 }

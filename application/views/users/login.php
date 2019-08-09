@@ -26,7 +26,7 @@
 	</div>
 	<div class="form-group">
 		<div class="col-sm-offset-2 col-sm-10">
-			<button type="submit" class="btn btn-primary"><?php echo _('Login') ?></button>
+			<button type="submit" class="btn btn-primary btn-block"><?php echo _('Login') ?></button>
 		</div>
 	</div>
 <?php echo form_close() ?>
