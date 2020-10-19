@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Nanum Gothic';
+    src: local('☺'),url('/assets/fonts/NanumGothic-Regular.eot?#iefix') format('embedded-opentype'),url('/assets/fonts/NanumGothic-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src:  url('/assets/fonts/material-icon.woff2') format('woff2');
+}

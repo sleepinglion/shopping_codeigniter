@@ -20,6 +20,10 @@ class Migration_Create_orders_products extends CI_Migration
             'type' => 'INT',
             'constraint' => 11,
           ),
+            'total_price' => array(
+                'type' => 'INT',
+                'constraint' => 11,
+            ),
           'quantity' => array(
             'type' => 'INT',
             'constraint' => 11,

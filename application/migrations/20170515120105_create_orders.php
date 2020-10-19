@@ -28,6 +28,14 @@ class Migration_Create_orders extends CI_Migration
             'type' => 'INT',
             'constraint' => 11
           ),
+            're_order' => array(
+                'type' => 'INT',
+                'constraint' => 1
+            ),
+            'stopped' => array(
+                'type' => 'INT',
+                'constraint' => 1
+            ),
           'enable' => array(
             'type' => 'TINYINT',
             'constraint' => 1,
