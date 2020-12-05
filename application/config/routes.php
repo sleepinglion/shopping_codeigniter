@@ -84,7 +84,6 @@ $route['admin/products'] = 'admin/products';
 $route['admin/products/create'] = 'admin/products/create';
 $route['admin/products/edit/(:any)'] = 'admin/products/edit/$1';
 
-$route['login'] = 'users/login';
-$route['logout'] = 'users/logout';
+$route['logout'] = 'loing/logout';
 $route['users/edit'] = 'users/edit';
 $route['popup'] = 'home/popup';

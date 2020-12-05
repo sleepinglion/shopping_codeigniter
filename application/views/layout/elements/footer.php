@@ -1,8 +1,11 @@
 <footer>
 	<div class="container">
 		<div class="row">
-		<address><br class="visible-xs" /><?php echo _('Footer Address') ?></address>
-		<form action="" class="form-inline">
+		<address class="col-12">
+			<a href="https://www.sleepinglion.pe.kr" target="_blank"><?php echo _('Footer Address') ?></a>
+			&nbsp;&nbsp; CopyLeft. 2020, SL. All wrongs reserved.
+		</address>
+		<form class="form-inline">
 			<select name="language" class="form-control">
 				<option value="english"<?php if ($this->session->userdata('language')=='english'): ?> selected="selected"<?php endif ?>><?php echo _('english') ?></option>
 				<option value="korean"<?php if ($this->session->userdata('language')=='korean'): ?> selected="selected"<?php endif ?>><?php echo _('korean') ?></option>

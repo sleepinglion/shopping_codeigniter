@@ -1,30 +1,14 @@
-<section id="sl_user_add_form" class="sl_user_form">
-	<?php echo $Layout->element('form_error_message'); ?>
+<section id="sl_user_add_form" class="col-12 sl_user_form">
 	<?php echo form_open_multipart('users/add', array('class' => 'form-horizontal', 'id' => 'user_form')); ?>
 	<input type="hidden" id="message_required" value="<?php echo _('The %s field is required.'); ?>" />
 	<input type="hidden" id="message_no_email" value="<?php printf(_('The %s field is required.'), _('Email')); ?>" />
 	<input type="hidden" id="message_invalid_email" value="<?php printf(_('The %s field must contain a valid email address.'), _('Email')); ?>" />
 	<input type="hidden" id="message_exists_email" value="<?php printf(_('%s field must contain a unique value.'), _('Email')); ?>" />
 	<input type="hidden" id="message_available_email" value="<?php echo _('Available Email'); ?>" />
-	
-	
 	<div class="card">
-  <div class="card-header">
-    <ul class="nav nav-pills card-header-pills">
-      <li class="nav-item">
-        <a class="nav-link<?php if ($this->session->userdata('user_open')): ?><?php if ($this->session->userdata('user_open') == 'default'): ?> active<?php endif; ?><?php else: ?><?php if (empty($data['content'])): ?> active<?php endif; ?><?php endif; ?>" href="#"><?php echo _('Default Info'); ?></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link<?php if ($this->session->userdata('user_open')): ?><?php if ($this->session->userdata('user_open') == 'detail'): ?> active<?php endif; ?><?php endif; ?>"  href="#"><?php echo _('Detail Info'); ?></a>
-      </li>
-    </ul>
-    <div class="float-right buttons">
-      <i class="material-icons"><?php if ($this->session->userdata('user_open')): ?>keyboard_arrow_up<?php else:?><?php if (empty($data['content'])): ?>keyboard_arrow_up<?php else: ?>keyboard_arrow_down<?php endif; ?><?php endif; ?></i>
-    </div>
-  </div>
   <div class="card-body" <?php if (!$this->session->userdata('user_open') and !empty($data['content'])): ?> style="display:none"<?php endif; ?>>
     <article class="card-block"<?php if ($this->session->userdata('user_open')): ?><?php if ($this->session->userdata('user_open') == 'detail'): ?> style="display:none"<?php endif; ?><?php endif; ?>>
-		<h3><?php echo _('User Data Default Insert'); ?></h3>
+		<h3 class="hidden-title"><?php echo _('User Data Default Insert'); ?></h3>
 		<div class="form-group row <?php if (form_error('email')) {
     echo ' has-error';
 } ?>">
@@ -36,7 +20,7 @@
 					<input type="button" id="check_email_available_button" class="form-control btn btn-success" value="<?php echo _('check_email_available'); ?>" />
 			</div>
 		</article>
-		<div class="form-group row <?php if (form_error('password')) {
+		<div class="form-group row<?php if (form_error('password')) {
     echo ' has-error';
 } ?>">
 			<label class="col-form-label col-sm-2" for="sl_password"><?php echo _('Password'); ?></label>
@@ -44,7 +28,7 @@
 				<input type="password" class="form-control" id="sl_password" name="password" value="<?php echo set_value('password'); ?>" maxlength="255" <?php if (ENVIRONMENT == 'production'): ?>required="required"<?php endif; ?> />
 			</div>
 		</div>
-		<div class="form-group row <?php if (form_error('password_confirm')) {
+		<div class="form-group row<?php if (form_error('password_confirm')) {
     echo ' has-error';
 } ?>">
 			<label class="col-form-label col-sm-2" for="sl_password_confirm"><?php echo _('Password Confirm'); ?></label>
@@ -52,7 +36,7 @@
 				<input type="password" class="form-control" id="sl_password_confirm" name="password_confirm" value="<?php echo set_value('password_confirm'); ?>" maxlength="255"   maxlength="255" <?php if (ENVIRONMENT == 'production'): ?>required="required"<?php endif; ?> />
 			</div>
 		</div>
-		<div class="form-group row <?php if (form_error('name')) {
+		<div class="form-group row<?php if (form_error('name')) {
     echo ' has-error';
 } ?>">
 			<label class="col-form-label col-sm-2" for="sl_name"><?php echo _('Name'); ?></label>
@@ -60,7 +44,7 @@
 				<input type="text" class="form-control" id="sl_name" name="name" maxlength="60" value="<?php echo set_value('name'); ?>" maxlength="255"  />
 			</div>
 		</div>
-		<div class="form-group row <?php if (form_error('phone')) {
+		<div class="form-group row<?php if (form_error('phone')) {
     echo ' has-error';
 } ?>">
 			<label class="col-form-label col-sm-2" for="sl_phone"><?php echo _('Phone'); ?></label>
@@ -68,7 +52,7 @@
 				<input type="text" class="form-control" id="sl_phone" name="phone" value="<?php echo set_value('phone'); ?>" maxlength="255"   maxlength="255" <?php if (ENVIRONMENT == 'production'): ?>required="required"<?php endif; ?> />
 			</div>
 		</div>
-		<div class="form-group row <?php if (form_error('birthday')) {
+		<div class="form-group row<?php if (form_error('birthday')) {
     echo ' has-error';
 } ?>">
 			<label class="col-form-label col-sm-2" for="sl_birthday"><?php echo _('Birthday'); ?></label>
@@ -133,6 +117,7 @@
 			</div>
 		</div>
 	</article>
+</div>
 </div>
 	<div class="section_bottom">
 		<input type="submit" class="btn btn-primary btn-block btn-lg" value="<?php echo _('User Form Submit'); ?>" />

@@ -25,9 +25,12 @@ class SL_Controller extends CI_Controller
     protected $default_view_file;
 
     protected $script = false;
-
+    protected $login_only=false;
+    
     // assets version
     protected $assets_version = 1;
+
+
 
     public function __construct()
     {
@@ -48,7 +51,7 @@ class SL_Controller extends CI_Controller
         }
 
         $this->set_locale();
-        //$this->login_check();
+        $this->login_check();
 
         /* // ACL 로드
         $this->load->model('Acl');
@@ -140,8 +143,12 @@ class SL_Controller extends CI_Controller
 
     protected function login_check()
     {
+        if(empty($this->login_only)) {
+            return true;
+        }
+
         if ($this->format == 'html') {
-            if (empty($this->session->userdata('admin_id'))) {
+            if (empty($this->session->userdata('user_id'))) {
                 if ($this->input->get('notice')) {
                     redirect('/login?notice=1');
                 } else {
@@ -149,7 +156,7 @@ class SL_Controller extends CI_Controller
                 }
             }
         } else {
-            if (empty($this->session->userdata('admin_id'))) {
+            if (empty($this->session->userdata('user_id'))) {
                 echo json_encode(array('result' => 'fail', 'message' => 'login first'));
                 exit;
             }
@@ -167,23 +174,22 @@ class SL_Controller extends CI_Controller
         /* i18n locale */
         $language = 'korean';
         //$language = 'english';
-
         if ($this->input->get('language')) {
             $language = $this->input->get('language');
             $this->session->set_userdata('language', $language);
         }
 
-        if ($this->session->userdata('language')) {
-            $language = $this->session->userdata('language');
+        if($this->session->userdata('language')) {
+            $language=$this->session->userdata('language');
         }
 
         switch ($language) {
-        case 'korean':
-          $locale = 'ko_KR.UTF-8';
-          break;
-        default:
-          $locale = 'en_US.UTF-8';
-      }
+            case 'korean':
+                $locale = 'ko_KR.UTF-8';
+                break;
+            default:
+                $locale = 'en_US.UTF-8';
+        }
 
         putenv('LC_ALL='.$locale);
         setlocale(LC_ALL, $locale);
@@ -203,21 +209,23 @@ class SL_Controller extends CI_Controller
             $this->layout->add_css('bootstrap.min.css');
             $this->layout->add_css('bootstrap-datepicker3.min.css');
             $this->layout->add_css('font-face.css');
-            $this->layout->add_css('index.css');
+            $this->layout->add_css('index.css?version='.$this->assets_version);
         } else {
-            // uglifycss --output common.min.css  bootstrap.min.css select2.min.css animate.min.css bootstrap-datepicker.css style.css theme/default.css jquery.fancybox-1.3.4.css font-awesome.min.css index.css
+            // uglifycss --output common.min.css  bootstrap.min.css select2.min.css animate.min.css bootstrap-datepicker.css style.css theme/default.css jquery.fancybox-1.3.4.css font-face-product.css index.css
             $this->layout->add_css('common.min.css?version='.$this->assets_version);
         }
 
         if (ENVIRONMENT == 'development') {
             $this->layout->add_js('jquery-2.1.1.min.js');
+            $this->layout->add_js('popper.min.js');
             $this->layout->add_js('bootstrap.min.js');
             $this->layout->add_js('bootstrap-datepicker.min.js');
+            $this->layout->add_js('jquery.fancybox.1.3.4.js');
             $this->layout->add_js('validate.min.js');
             $this->layout->add_js('plugin/jquery.tagcanvas.min.js');
             $this->layout->add_js('common.js');
         } else {
-            // uglifyjs --output common.min.js   jquery-2.1.1.min.js bootstrap.min.js bootstrap-datepicker.min.js validate.min.js  jquery.form.min.js jquery.fancybox.1.3.4.js  select2.min.js jquery.pagination.js bootstrap-datepicker.min.js common.js
+            // uglifyjs --output common.min.js jquery-2.1.1.min.js popper.min.js bootstrap.min.js bootstrap-datepicker.min.js jquery.fancybox.1.3.4.js validate.min.js  jquery.form.min.js jquery.fancybox.1.3.4.js select2.min.js jquery.pagination.js bootstrap-datepicker.min.js common.js
             $this->layout->add_js('common.min.js?version='.$this->assets_version);
         }
     }

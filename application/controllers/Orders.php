@@ -4,6 +4,7 @@ require 'SL.php';
 
 class Orders extends SL_Controller {
 	protected $model = 'Order';
+	protected $login_only=true;
 
 	public function add() {
 		$this -> load -> library('form_validation');

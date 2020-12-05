@@ -27,7 +27,10 @@
 		</div>
 		<?php else: ?>
 		<?php echo $Layout->element('page_header') ?>
-		<div class="sub_main" class="row">
+          <div class="row">
+            <?php echo $Layout->Element('message'); ?>
+          </div>
+		<div class="sub_main row">
 			<?php echo $contents_for_layout ?>
 		</div>
 		<?php endif ?>

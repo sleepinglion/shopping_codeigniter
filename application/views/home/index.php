@@ -1,4 +1,4 @@
-<section id="home">
+<section id="home" class="col-12">
 	<h2>서비스 카피</h2>
 	<article>
 		<h3>서비스 이미지</h3>

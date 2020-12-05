@@ -23,17 +23,13 @@ class Users extends SL_Controller
         $this -> set_message();
 
         // require user data
-        $this -> form_validation -> set_rules('email', _('Email'), 'required|is_unique[users.email]|trim|valid_email');
+        $this -> form_validation -> set_rules('email', _('Email'), 'required|trim|valid_email');
         $this -> form_validation -> set_rules('password', _('Password'), 'required|trim|min_length[5]|max_length[40]|matches[password_confirm]');
         $this -> form_validation -> set_rules('password_confirm', _('Password Confirmation'), 'required|trim|min_length[5]|max_length[40]|matches[password]');
         $this -> form_validation -> set_rules('name', _('Name'), 'required|trim|min_length[2]|max_length[10]');
         $this -> form_validation -> set_rules('phone', _('Phone'), 'required|trim|min_length[5]');
-        $this -> form_validation -> set_rules('birthday', _('Birthday'), 'required|trim|check_date', array('check_date' => _('%s Must Validate Date ex) Y-m-d')));
+        $this -> form_validation -> set_rules('birthday', _('Birthday'), 'required|trim');
         $this -> form_validation -> set_rules('sex', _('Sex'), 'required|trim');
-
-        // optional user data
-        $this -> form_validation -> set_rules('height', _('Height'), 'numeric|greater_than[20]|less_than[300]');
-        $this -> form_validation -> set_rules('weight', _('Weight'), 'numeric|greater_than[20]|less_than[300]');
 
         // user agreement
         $this -> form_validation -> set_rules('agree[service]', _('Service Agreement'), 'required', array('required' => _('Please Agree %s')));
@@ -72,9 +68,6 @@ class Users extends SL_Controller
         $this -> form_validation -> set_rules('birthday', _('Birthday'), 'required|trim|check_date', array('check_date' => _('%s Must Validate Date')));
         $this -> form_validation -> set_rules('sex', _('Sex'), 'required|trim');
 
-        $this -> form_validation -> set_rules('height', _('Height'), 'numeric|greater_than[20]|less_than[300]');
-        $this -> form_validation -> set_rules('weight', _('Weight'), 'numeric|greater_than[20]|less_than[300]');
-
         $this -> load -> model('User');
         $this -> return_data['common_data']['title'] = _('Edit User');
         $this -> return_data['data']['content'] = $this -> User -> get_content($this -> session -> userdata('user_id'));
@@ -108,66 +101,6 @@ class Users extends SL_Controller
     public function complete()
     {
         $this -> layout -> render('users/complete', $this -> return_data);
-    }
-
-    public function login()
-    {
-        $this -> load -> library('form_validation');
-        $this -> set_message();
-
-        $this -> form_validation -> set_rules('email', _('Email'), 'required|valid_email|max_length[40]');
-        $this -> form_validation -> set_rules('password', _('Password'), 'required|min_length[5]|max_length[40]');
-
-        if ($this -> form_validation -> run() == true) {
-            $this -> load -> model('User');
-
-            $crypt = false;
-            if ($this -> input -> post('crypt')) {
-                $crypt = true;
-            }
-
-            if ($user = $this -> User -> login($this -> input -> post('email'), $this -> input -> post('password'), $crypt)) {
-                $this -> session -> set_userdata(array('user_id' => $user['id'], 'name' => $user['name']));
-
-                $this -> load -> model('UserLoginLog');
-                $this -> UserLoginLog -> insert();
-
-                if ($this -> input -> post('json')) {
-                    echo json_encode(array('result' => 'success'));
-                    return true;
-                } else {
-                    redirect(base_url());
-                }
-            } else {
-                if ($this -> input -> post('json')) {
-                    echo json_encode(array('result' => 'error', 'message' => _('Not Match ID OR Password')));
-                    return true;
-                } else {
-                    $this -> session -> set_flashdata('message', array('type' => 'danger', 'message' => _('Not Match ID OR Password')));
-                    redirect(base_url() . 'login');
-                }
-            }
-        } else {
-            if ($this -> input -> post('json')) {
-                $message = $this -> form_validation -> error_array();
-                echo json_encode(array('result' => 'error', 'message' => $message));
-                return true;
-            }
-        }
-
-        $this -> return_data['common_data']['title'] = _('Login');
-        $this -> layout -> add_js('jquery-2.1.1.min.js');
-        $this -> layout -> add_js('sha1.js');
-        $this -> layout -> add_js('validate.min.js');
-        $this -> layout -> add_js('users/login.js');
-
-        $this->render_format();
-    }
-
-    public function logout()
-    {
-        $this -> session -> sess_destroy();
-        redirect(base_url());
     }
 
     public function check_email()

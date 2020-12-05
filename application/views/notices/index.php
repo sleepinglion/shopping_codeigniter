@@ -1,4 +1,4 @@
-<div id="sl_notice_index">
+<div id="sl_notice_index" class="col-12">
 	<div class="table-responsive">
 		<table class="table table-striped" border="0" cellpadding="0" cellspacing="0">
 			<colgroup>

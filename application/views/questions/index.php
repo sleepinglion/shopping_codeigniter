@@ -1,4 +1,4 @@
-<div id="sl_question_index">
+<div id="sl_question_index" class="col-12">
 	<article class="table-responsive">
 		<table width="100%" cellpadding="0" cellspacing="0" class="table table-striped">
 			<colgroup>
